@@ -22,17 +22,12 @@ VALUES ('$titre', '$article')";
 // on envoie la requête
     $res = mysqli_query($bdd, $req);
 
-    echo 'Ajouté';
+    echo 'Les données ont bien été Ajoutées';
+} else { // si champs pas rempli erreur
+    echo "les champs sont vide , reesayez";
 }
-else { // si champs pas rempli erreur
-    echo"les champs sont vide , reesayez";
-}
+
 ?>
-
-
-
-
-
 
 
 </body>

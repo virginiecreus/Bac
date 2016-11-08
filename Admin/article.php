@@ -7,7 +7,7 @@
 
 </head>
 <body>
-
+<?php include 'menu.php'?>
 <div class="container">
     <div class="row">
         <h2 class="page-header text-center font">Ajouter un Article !</h2>
