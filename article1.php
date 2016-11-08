@@ -5,7 +5,8 @@
 </head>
 
 <body>
-<?php include 'config.php'; ?>
+<?php include 'config.php';
+?>
 <?php
 
 // si champs rempli envoyer dans la bdd
