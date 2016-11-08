@@ -14,11 +14,12 @@ if (isset($_POST['titre']) && isset($_POST['article'])) {
 // on récupére les champs du formulaire
     $titre = $_POST['titre'];
     $article = $_POST['article'];
+    $role = $_POST['role'];
 
 
 // On créé la requête
-    $req = "INSERT INTO articles (titre_article, article) 
-VALUES ('$titre', '$article')";
+    $req = "INSERT INTO articles (titre_article, article, role) 
+VALUES ('$titre', '$article', '$role')";
 // on envoie la requête
     $res = mysqli_query($bdd, $req);
 

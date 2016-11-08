@@ -35,7 +35,21 @@
                             <textarea type="text" class="form-control" name="article" placeholder="Article"></textarea>
                         </div>
                     </div>
-                      
+
+                    <div >
+
+                        <div>
+                            <label for="name" class="ccontrol-label font">Publier</label>
+                            <input  type="radio" name="role" value="publie" >
+                        </div>
+
+                        <div>
+                            <label for="name" class="control-label font">Brouillon</label>
+                            <input  type="radio" name="role" value="brouillon" >
+                        </div>
+                    </div>
+
+
 
 
 
