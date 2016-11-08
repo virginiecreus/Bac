@@ -27,8 +27,8 @@
                                         <br>
                                         <li><a href="index.php">Accueil</a></li>
                                         <li><a href="Afficher_article.php">Blog</a></li>
-                                        <li><a href="Membre/profil_membre.php">Profil</a></li>
-                                        <li><a href="Admin/page_admin.php">Admin</a></li>
+                                        <li><a href="profil_membre.php">Profil</a></li>
+                                        <li><a href="page_admin.php">Admin</a></li>
                                     </ul>
                                 </div><!--/.nav-collapse -->
                             </div>
@@ -39,6 +39,5 @@
                     </div>
                 </div>
             </div>
-
             </body>
     </html>
