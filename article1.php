@@ -29,5 +29,5 @@ VALUES ('$titre', '$article', '$role')";
 }
 
 ?>
-</body>
+    </body>
 </html>
