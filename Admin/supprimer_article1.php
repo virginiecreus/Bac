@@ -25,8 +25,6 @@ WHERE id = '$art'
 }
 
 ?>
-
-
 </body>
 </html>
 

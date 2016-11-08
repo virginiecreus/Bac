@@ -30,7 +30,8 @@ if (isset($_POST['modifier'])) {
     echo "les champs sont vide , reesayez";
 }
 ?>
-
+</body>
+</html>
 
 
 
