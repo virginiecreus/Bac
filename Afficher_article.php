@@ -15,8 +15,10 @@ include 'config.php'?>
         <div class="col-md-8">
 <?php include 'menu.php'?>
 <?php
+// On créé la requête pour afficher les données qui sont unique publier
 $requete = "SELECT * FROM articles WHERE publier ='oui'";
 $exec = mysqli_query($bdd,$requete);
+// On affiche le lignes les unes après les autres
 $res = array();
 while ($row = mysqli_fetch_array($exec)) {
     $res[] = $row;
@@ -42,7 +44,9 @@ while ($row = mysqli_fetch_array($exec)) {
         </div>
     </div>
 </div>
+
 <?php
+// précise si vou êtes connecté et sous quel role 
 if ($_SESSION['logged']) {
     echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' est connecté en tant que "' . $_SESSION['role'] . '" .';
 }

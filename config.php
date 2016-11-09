@@ -1,4 +1,5 @@
 <?php
+$_SESSION['logged'] = (isset($_SESSION['logged']))?$_SESSION['logged']:false;
 
 ini_set('display_error', 1);
 error_reporting(E_ALL);
