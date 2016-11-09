@@ -29,7 +29,7 @@ AND publier='oui'";
             <div class="panel-heading">
                 <tr>
                     <td>Titre :</td>
-                    <td><?php echo strtoupper($row['titre']); ?></td>
+                    <td><?php echo ($row['titre_article']); ?></td>
                 </tr>
             </div>
             <div class="panel-body">
