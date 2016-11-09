@@ -54,7 +54,7 @@ if ($_SESSION['logged']) {
 echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . '<a href="deconnexion.php"><button">deconnexion</button></a>';
 }
 else {
-echo 'connectez vous !!!';
+ echo 'connectez vous !!!';
 }
 ?>
 </body>
