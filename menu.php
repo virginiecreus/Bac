@@ -33,7 +33,7 @@ include 'config.php';
                             <li><a href="Afficher_article.php">Blog</a></li>
                             <li><a href="profil_membre.php">Profil</a></li>
                             <?php // ajout des permision pour les admin
-                            if ($_SESSION['role'] === 'admin') { ?>
+                            if ($_SESSION['utilisateur']['role'] === 'admin') { ?>
 
                                 <li><a href="page_admin.php">Admin</a></li>
 
