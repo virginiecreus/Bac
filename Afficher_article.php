@@ -12,7 +12,7 @@ include 'config.php'?>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
 <?php include 'menu.php'?>
             <?php
             $requete = "SELECT * FROM articles
@@ -25,26 +25,32 @@ AND publier='oui'";
                 $res[] = $row;
                 ?>
 
-                <table class="table">
-                    <thead class="thead-inverse text-center">
-                    <tr>
-                        <th>Titre : <?php echo $row['titre_article']; ?></th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>Article: <?php echo $row['article']; ?></td>
-                    </tr>
-                    <tbody>
-                    <tr>
-                        <td>
-                        <td>Utilisateur: <?php echo $row['pseudo']; ?></td>
-                        </td>
-                    </tr>
-                    </tbody>
-
-                </table>
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <tr>
+                    <td>Titre :</td>
+                    <td><?php echo strtoupper($row['titre']); ?></td>
+                </tr>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class=" col-md-8 col-lg-8 ">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td>Article :</td>
+                                <td><?php echo($row['article']); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Publié par :</td>
+                                <td><?php echo($row['pseudo']); ?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
                 <?php
             }
             ?>
