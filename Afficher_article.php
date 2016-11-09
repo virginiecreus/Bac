@@ -10,10 +10,11 @@ include 'config.php'?>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<?php include 'menu.php'?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-<?php include 'menu.php'?>
+
             <?php
             $requete = "SELECT * FROM articles
 INNER JOIN utilisateurs
