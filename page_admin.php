@@ -26,7 +26,9 @@ include 'config.php';
             </div>
         </div>
     </div>
-<?php include 'Liste_article.php' ?>
+    <br>
+<?php include 'Liste_article.php' ;
+include 'Liste_brouillon.php'; ?>
     <?php
     if ($_SESSION['logged']) {
         echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' est connecté en tant que "' . $_SESSION['role'] . '" .';

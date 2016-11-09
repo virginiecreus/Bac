@@ -28,6 +28,7 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
             $_SESSION['nom'] = $data['nom'];
             $_SESSION['prenom'] = $data['prenom'];
             $_SESSION['role'] = $data['role'];
+            $_SESSION['id'] = $data['id'];
             /**$_SESSION['nom_role'] = $data['nom_role'];**/
             header("Location:index.php?vousetesconnecte");
             /**var_dump($_SESSION);**/

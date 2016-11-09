@@ -10,12 +10,15 @@ include 'config.php';
 </head>
 <body>
 <?php
-//on sélectionne la table articles et on lui demande d'afficher que les articles dont le champs publier vaut non
-$requete = "SELECT * FROM articles WHERE publier ='non'";
-$exec = mysqli_query($bdd,$requete); //on execute la connexion à la bdd et le select
-$res = array(); //on affiche le résultat en tableau
+$requete = "SELECT * FROM articles
+INNER JOIN utilisateurs
+WHERE utilisateurs.id = articles.utilisateurs_id
+AND publier='oui'";
+$exec = mysqli_query($bdd,$requete);
+$res = array();
 while ($row = mysqli_fetch_array($exec)) {
-    $res[] = $row; // notre boucle avec la variable qui correspond à afficher les champs de notre bdd
+    $res[] = $row;
+
 
     ?>
 
@@ -30,11 +33,21 @@ while ($row = mysqli_fetch_array($exec)) {
         <tr>
             <td>Article: <?php echo $row['article']; ?></td>
         </tr>
+        <tbody>
+        <tr>
+            <td>
+            <td>Utilisateur: <?php echo $row['pseudo']; ?></td>
+            </td>
+        </tr>
         </tbody>
 
     </table>
     <?php
 }
 ?>
+<?php
+
+    ?>
 </body>
 </html>
+
