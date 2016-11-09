@@ -49,6 +49,19 @@
                         </div>
                     </div>
 
+                    <div >
+
+                        <div><a>Publier :</a>
+                            <label for="name" class="control-label font">Oui</label>
+                            <input  type="radio" name="publier" value="oui" >
+                        </div>
+                        <div>
+                            <label for="name" class="control-label font">Non</label>
+                            <input  type="radio" name="publier" value="non" >
+                        </div>
+
+                    </div>
+
                     <div class="col-md-6 col-md-offset-2">
                         <div class="col-md-2">
                             <a href="article.php"><bouton id="ajouter" name="ajouter" type="submit"  value="Ajouter" class="btn btn-success">Ajouter</bouton></a>
