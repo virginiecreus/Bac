@@ -1,4 +1,5 @@
-<?php include 'config.php'?>
+<?php session_start();
+include 'config.php'?>
 
 
 <! DOCTYPE html>
@@ -41,5 +42,13 @@ while ($row = mysqli_fetch_array($exec)) {
         </div>
     </div>
 </div>
+<?php
+if ($_SESSION['logged']) {
+    echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' est connecté en tant que "' . $_SESSION['role'] . '" .';
+}
+else {
+    echo 'connectez vous !!!';
+}
+?>
 </body>
 </html>

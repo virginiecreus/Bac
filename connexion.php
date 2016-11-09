@@ -1,5 +1,7 @@
-<?php include 'config.php';
-include 'menu.php'?>;
+<?php session_start();
+include 'config.php';
+include 'menu.php';
+?>
 <! DOCTYPE html>
 <html>
 <head>

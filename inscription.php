@@ -1,5 +1,7 @@
 
-<?php include 'menu.php'?>
+<?php session_start();
+include 'menu.php'
+?>
 
 
 <form action="inscription1.php" method="post">

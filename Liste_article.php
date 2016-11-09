@@ -1,4 +1,5 @@
-<?php include 'config.php';
+<?php session_start();
+include 'config.php';
 ?>
 <! DOCTYPE html>
 <html>
@@ -18,16 +19,20 @@ while ($row = mysqli_fetch_array($exec)) {
 
     ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
+    <table class="table">
+        <thead class="thead-inverse text-center">
+        <tr>
+            <th>Titre : <?php echo $row['titre_article']; ?></th>
+        </tr>
+        </thead>
 
-                <h1>Titre article: <?php echo $row['titre_article']; ?></h1>
-                <h2>Article: <?php echo $row['article']; ?></h2>
-                <h3>Publier: <?php echo $row['publier']; ?></h3>
-            </div>
-        </div>
-    </div>
+        <tbody>
+        <tr>
+            <td>Article: <?php echo $row['article']; ?></td>
+        </tr>
+        </tbody>
+
+    </table>
     <?php
 }
 ?>

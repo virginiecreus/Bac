@@ -5,7 +5,8 @@
 </head>
 
 <body>
-<?php include 'config.php';
+<?php session_start();
+include 'config.php';
 ?>
 <?php
 
@@ -16,11 +17,12 @@ if (isset($_POST['titre']) && isset($_POST['article'])) {
     $titre = addslashes($_POST['titre']);
     $article = addslashes($_POST['article']);
     $publier = htmlspecialchars($_POST['publier']);
+    $users = $_SESSION['id'];
 
 
 // On créé la requête
-    $req = "INSERT INTO articles (titre_article, article, publier) 
-VALUES ('$titre', '$article', '$publier')";
+    $req = "INSERT INTO articles (titre_article, article, utilisateurs_id, publier) 
+VALUES ('$titre', '$article', '$users', '$publier')";
 // on envoie la requête
     $res = mysqli_query($bdd, $req);
 

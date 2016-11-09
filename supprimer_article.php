@@ -1,4 +1,7 @@
-<?php include 'config.php'; ?>
+<?php session_start();
+include 'menu.php';
+include 'config.php';
+?>
 <html>
 <head>
     <meta charset="utf-8">
