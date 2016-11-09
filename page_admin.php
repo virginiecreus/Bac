@@ -29,13 +29,5 @@ include 'config.php';
     <br>
 <?php include 'Liste_article.php' ;
 include 'Liste_brouillon.php'; ?>
-    <?php
-    if ($_SESSION['logged']) {
-        echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' est connecté en tant que "' . $_SESSION['role'] . '" .';
-    }
-    else {
-        echo 'connectez vous !!!';
-    }
-    ?>
 </body>
 </html>
