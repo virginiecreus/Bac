@@ -1,7 +1,5 @@
-<?php session_start();
-include 'config.php';
-include 'menu.php';
-?>
+<?php include 'config.php';
+include 'menu.php'?>;
 <! DOCTYPE html>
 <html>
 <head>
@@ -31,7 +29,7 @@ include 'menu.php';
     </form>
     <?php
     if ($_SESSION['logged']) {
-        echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' est connecté en tant que "' . $_SESSION['role'] . '" .';
+        echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' "' . $_SESSION['role'] . '" .';
     }
     else {
         echo 'connectez vous !!!';

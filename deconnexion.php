@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: creus
- * Date: 09/11/16
- * Time: 09:50
- */
+// On démarre la session
+session_start ();
+// On détruit les variables de notre session
+session_unset ();
+// On détruit notre session
+session_destroy ();
+// On redirige le visiteur vers la page d'accueil
+header ('location: index.php');
+?>

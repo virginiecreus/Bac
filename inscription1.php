@@ -6,8 +6,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<?php session_start();
-include'config.php';
+<?php include'config.php';
 // verifie si les champs sont vide et recupere les champs
    if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mdp'])) {
 

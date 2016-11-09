@@ -4,7 +4,7 @@ include 'menu.php'
 ?>
 
 
-<form action="inscription1.php" method="post">
+<form action="inscription1.php" method="post" enctype="multipart/form-data">
     <div class="form-group row">
         <label for="example-text-input" class="col-xs-1 col-form-label">nom</label>
         <div class="col-xs-3">
@@ -36,6 +36,11 @@ include 'menu.php'
             <input class="form-control" type="password" name="mdp" placeholder="">
         </div>
     </div>
+
+
+    <input type="file" name="avatar">
+
+
     <div class="form-group">
         <div class="col-xs-3 col-xs-offset-2">
     <input type="submit" name="ajouter" class="btn btn-success">
