@@ -19,9 +19,10 @@ include 'config.php';
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Accueil</a></li>
             <li><a href="Afficher_article.php">Blog</a></li>
+            <li><a href="profil_membre.php">Profil</a></li>
             <?php
             if($_SESSION['logged'] && $_SESSION['role'] == "admin") {
-                echo '<li><a href="profil_membre.php">Profil</a></li>';
+                echo '<li><a href="page_admin.php">Admin</a></li>';
             }
             ?>
 
