@@ -49,5 +49,13 @@ include 'config.php';
         </div>
     </div>
 </div>
+<?php
+if ($_SESSION['logged']) {
+echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . '<a href="deconnexion.php"><button">deconnexion</button></a>';
+}
+else {
+echo 'connectez vous !!!';
+}
+?>
 </body>
 </html>
