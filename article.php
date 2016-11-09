@@ -39,15 +39,15 @@
 
                     <div >
 
+                        <div><a>Publier :</a>
+                            <label for="name" class="control-label font">Oui</label>
+                            <input  type="radio" name="publier" value="oui" >
+                        </div>
                         <div>
-                            <label for="name" class="ccontrol-label font">Publier</label>
-                            <input  type="radio" name="role" value="publie" >
+                            <label for="name" class="control-label font">Non</label>
+                            <input  type="radio" name="publier" value="non" >
                         </div>
 
-                        <div>
-                            <label for="name" class="control-label font">Brouillon</label>
-                            <input  type="radio" name="role" value="brouillon" >
-                        </div>
                     </div>
 
 
