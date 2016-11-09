@@ -23,6 +23,6 @@
             </div>
         </div>
     </div>
-
+<?php include 'Liste_article.php' ?>
 </body>
 </html>
