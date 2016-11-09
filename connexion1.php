@@ -30,6 +30,7 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
             $_SESSION['role'] = $data['role'];
             $_SESSION['utilisateur'] = $data;
             $_SESSION['pseudo']=$data['pseudo'];
+            $_SESSION['id']=$data['id'];
             /**$_SESSION['nom_role'] = $data['nom_role'];**/
             header("Location:index.php?vousetesconnecte");
             /**var_dump($_SESSION);**/

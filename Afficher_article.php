@@ -23,8 +23,6 @@ AND publier='oui'";
             $res = array();
             while ($row = mysqli_fetch_array($exec)) {
                 $res[] = $row;
-
-
                 ?>
 
                 <table class="table">
@@ -49,9 +47,6 @@ AND publier='oui'";
                 </table>
                 <?php
             }
-            ?>
-            <?php
-
             ?>
         </div>
     </div>
