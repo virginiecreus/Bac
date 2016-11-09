@@ -10,7 +10,7 @@ include 'config.php';
 
 </head>
 <body>
-<?php include 'menu.php'; ?>
+
 <div class="container">
     <div class="row">
         <h2 class="page-header text-center font">Supprimer un article !</h2>
