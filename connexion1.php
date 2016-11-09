@@ -23,12 +23,13 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
         // On vérifie que son mot de passe est correct
         if ($_POST['mail'] == $data['mail'] && $_POST['mot_de_passe'] == $data['mot_de_passe']){
             $_SESSION['logged'] = true;
-            $_SESSION['mail'] = $data['email'];
+            $_SESSION['mail'] = $data['mail'];
             $_SESSION['mot_de_passe'] = $data['mot_de_passe'];
             $_SESSION['nom'] = $data['nom'];
             $_SESSION['prenom'] = $data['prenom'];
             $_SESSION['role'] = $data['role'];
             $_SESSION['utilisateur'] = $data;
+            $_SESSION['pseudo']=$data['pseudo'];
             /**$_SESSION['nom_role'] = $data['nom_role'];**/
             header("Location:index.php?vousetesconnecte");
             /**var_dump($_SESSION);**/
