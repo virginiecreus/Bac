@@ -14,33 +14,45 @@ include 'config.php'?>
     <div class="row">
         <div class="col-md-8">
 <?php include 'menu.php'?>
-<?php
-// On créé la requête pour afficher les données qui sont unique publier
-$requete = "SELECT * FROM articles WHERE publier ='oui'";
-$exec = mysqli_query($bdd,$requete);
-// On affiche le lignes les unes après les autres
-$res = array();
-while ($row = mysqli_fetch_array($exec)) {
-    $res[] = $row;
+            <?php
+            $requete = "SELECT * FROM articles
+INNER JOIN utilisateurs
+WHERE utilisateurs.id = articles.utilisateurs_id
+AND publier='oui'";
+            $exec = mysqli_query($bdd,$requete);
+            $res = array();
+            while ($row = mysqli_fetch_array($exec)) {
+                $res[] = $row;
 
-    ?>
-        <table class="table">
-            <thead class="thead-inverse text-center">
-                <tr>
-                    <th>Titre : <?php echo $row['titre_article']; ?></th>
-                </tr>
-            </thead>
 
-            <tbody>
-                <tr>
-                    <td>Article: <?php echo $row['article']; ?></td>
-                </tr>
-            </tbody>
+                ?>
 
-        </table>
-    <?php
-}
-?>
+                <table class="table">
+                    <thead class="thead-inverse text-center">
+                    <tr>
+                        <th>Titre : <?php echo $row['titre_article']; ?></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Article: <?php echo $row['article']; ?></td>
+                    </tr>
+                    <tbody>
+                    <tr>
+                        <td>
+                        <td>Utilisateur: <?php echo $row['pseudo']; ?></td>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+                <?php
+            }
+            ?>
+            <?php
+
+            ?>
         </div>
     </div>
 </div>
