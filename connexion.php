@@ -27,14 +27,7 @@ include 'menu.php'?>;
             </div>
         </div>
     </form>
-    <?php
-    if ($_SESSION['logged']) {
-        echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' "' . $_SESSION['role'] . '" .';
-    }
-    else {
-        echo 'connectez vous !!!';
-    }
-    ?>
+
 
 </body>
 
