@@ -5,7 +5,7 @@ include 'config.php';
 // On démarre la session
 
 // On n'effectue les traitement qu'à la condition que
-// les informations aient été effectivement postées
+// les informations aient été postées
 if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])) ) {
     $email =  $_POST['mail'];
     $mdp = $_POST['mot_de_passe'];
