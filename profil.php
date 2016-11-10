@@ -47,6 +47,8 @@ include 'config.php';
         </div>
     </div>
 </div>
+<div class="container">
+<div class="row">
 
 <button type="button" class="btn btn-primary btn-lg col-md-offset-5" data-toggle="modal" data-target="#modifier">
     Modifier profil
@@ -68,6 +70,34 @@ include 'config.php';
         </div>
     </div>
 </div>
+    </div>
+    </div>
+
+        <br>
+<div class="container">
+    <div class="row">
+<button type="button" class="btn btn-primary btn-lg col-md-offset-5" data-toggle="modal" data-target="#supprime">
+    Supprimer profil
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="supprime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="supprime">Modification</h4>
+            </div>
+            <div class="modal-body">
+                <?php include"supprimer_profil.php"?>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
