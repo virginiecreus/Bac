@@ -30,13 +30,16 @@ include 'config.php';
 
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="inscription.php"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+
+
+
             <?php
             if(!$_SESSION['logged']){
+                echo '<li><a href="inscription.php"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>';
                 echo '<li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
             }
             else{
-                echo '<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in">Se déconnecter !</span></a></li>';
+                echo '<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
             }
             ?>
         </ul>
