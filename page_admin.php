@@ -10,7 +10,12 @@ include 'config.php';
 
 </head>
 <body>
+<?php include 'Liste_article.php' ;
+include 'Liste_brouillon.php'; ?>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3">
 <!-- bouton pour acceder au modal des modification-->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ajouter">
     Ajouter un article
@@ -78,7 +83,9 @@ include 'config.php';
         </div>
     </div>
 </div>
-
+</div>
+        </div>
+    </div>
 <!-- <a href="article.php" target="_blank"><img src="img/ajout_article.jpeg"/></a><br>
                 <a>Créer un article</a>
             </div>
@@ -93,8 +100,7 @@ include 'config.php';
         </div>
     </div>
     <br> -->
-<?php include 'Liste_article.php' ;
-include 'Liste_brouillon.php'; ?>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
