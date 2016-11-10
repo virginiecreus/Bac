@@ -84,22 +84,45 @@ include 'Liste_brouillon.php'; ?>
     </div>
 </div>
 </div>
+        <div class="container">
+            <div class="row">
+            <h2>Gestion de l'administrateur</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Mot de passe</th>
+                    <th>Avatar</th>
+                    <th>Pseudo</th>
+                    <th>Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
-<!-- <a href="article.php" target="_blank"><img src="img/ajout_article.jpeg"/></a><br>
-                <a>Créer un article</a>
-            </div>
-            <div class="col-md-4">
-                <a href="modifier_article.php" target="_blank"><img src="img/modifier_article.jpg"/></a><br>
-                <a>Modifier un article</a>
-            </div>
-            <div class="col-md-4">
-                <a href="supprimer_article.php" target="_blank"><img src="img/supprimer_article.jpeg"/></a><br>
-                <a>Supprimer un article</a>
-            </div>
-        </div>
     </div>
-    <br> -->
+    </div>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
