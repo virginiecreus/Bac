@@ -7,21 +7,12 @@
 
 </head>
 <body>
-<?php include 'menu.php'; ?>
-<div class="container">
-    <div class="row">
-        <h2 class="page-header text-center font">Modifier un article !</h2>
-        <div class="col-md-5 col-sm-6 col-xs-12">
-        </div>
-    </div>
-</div>
-
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-5 col-md-offset-1">
                 <form name="insertion" action="modifier_article1.php" method="POST" class="form-horizontal">
-                    <select class="form-control" name="art">
+                    <select class="form-control " name="art">
                         <?php
                         $sql= "SELECT * FROM articles";
                         $req = $bdd->query($sql);
@@ -34,43 +25,36 @@
                         <?php };
                         ?>
                     </select>
-
+                    <br>
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label font">Titre :</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="titre" placeholder="Titre">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">Texte :</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <textarea type="text" class="form-control" name="article" placeholder="Article"></textarea>
                         </div>
                     </div>
 
                     <div >
 
-                        <div><a>Publier :</a>
+                        <div class="col-md-offset-1"><a>Publier :</a>
                             <label for="name" class="control-label font">Oui</label>
                             <input  type="radio" name="publier" value="oui" >
-                        </div>
-                        <div>
+
                             <label for="name" class="control-label font">Non</label>
                             <input  type="radio" name="publier" value="non" >
                         </div>
 
                     </div>
-
+                    <br>
                     <div class="col-md-6 col-md-offset-2">
                         <div class="col-md-2">
-                            <a href="article.php"><bouton id="ajouter" name="ajouter" type="submit"  value="Ajouter" class="btn btn-success">Ajouter</bouton></a>
-                        </div>
-                        <div class="col-md-2">
                             <input id="modifier" name="modifier" type="submit" value="Modifier" class="btn btn-warning">
-                        </div>
-                        <div class="col-md-2">
-                            <a href="supprimer_article.php"><bouton  id="supprimer" name="supprimer" type="submit"  value="Supprimer" class="btn btn-danger">Supprimer</bouton></a>
                         </div>
                     </div>
                 </form>
