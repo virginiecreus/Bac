@@ -22,7 +22,7 @@
                         while ($req1 = mysqli_fetch_object($req)) { ?>
                             <option value="<?php echo $req1->id ?>"><?php echo $req1->titre_article ?></option>
 
-                        <?php };
+                        <?php    };
                         ?>
                     </select>
                     <br>

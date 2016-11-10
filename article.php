@@ -29,7 +29,7 @@ include 'config.php';
                         </div>
                     </div>
 
-                    <div >
+                    <div   >
 
                         <div class="col-lg-offset-1"><a>Publier :</a>
                             <label for="name" class="control-label font">Oui</label>

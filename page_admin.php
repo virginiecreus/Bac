@@ -59,7 +59,7 @@ include 'config.php';
 
 <!-- bouton pour acceder au modal de suppresion des articles -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#supprimer">
-    Supprimer un article
+          Supprimer un article
 </button>
 
 <!-- Modal -->

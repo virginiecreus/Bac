@@ -19,7 +19,7 @@ include 'config.php';
                         <?php
                         $sql= "SELECT * FROM articles";
                         $req = $bdd->query($sql);
-                        ?>
+                            ?>
                         <?php
                         // on envoie la requête
                         while ($req1 = mysqli_fetch_object($req)) { ?>
