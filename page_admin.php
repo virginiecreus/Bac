@@ -86,40 +86,44 @@ include 'Liste_brouillon.php'; ?>
 </div>
         <div class="container">
             <div class="row">
-            <h2>Gestion de l'administrateur</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Email</th>
-                    <th>Mot de passe</th>
-                    <th>Avatar</th>
-                    <th>Pseudo</th>
-                    <th>Role</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+                <?php
+                $requete = "SELECT * FROM utilisateurs";
+                $exec = mysqli_query($bdd,$requete);
+                $res = array();
+                while ($row = mysqli_fetch_array($exec)) {
+                $res[] = $row;
+                ?>
+                <h2>Gestion de l'administrateur</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Mot de passe</th>
+                        <th>Avatar</th>
+                        <th>Pseudo</th>
+                        <th>Role</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><?php echo $row['nom']?></td>
+                        <td><?php echo $row['prenom']?></td>
+                        <td><?php echo $row['mail']?></td>
+                        <td><?php echo $row['mot_de_passe']?></td>
+                        <td><?php echo $row['avatar']?></td>
+                        <td><?php echo $row['pseudo']?></td>
+                        <td><?php echo $row['role']?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    </div>
+        </div>
+        <?php
+        }
+        ?>
     </div>
     </div>
 
