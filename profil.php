@@ -47,6 +47,28 @@ include 'config.php';
         </div>
     </div>
 </div>
-<?php include 'modifier_profil.php'?>
+
+<button type="button" class="btn btn-primary btn-lg col-md-offset-5" data-toggle="modal" data-target="#modifier">
+    Modifier profil
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modifier">Modification</h4>
+            </div>
+            <div class="modal-body">
+                <?php include"modifier_profil.php"?>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

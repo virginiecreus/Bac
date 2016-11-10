@@ -1,5 +1,4 @@
 <?php session_start();
-include 'menu.php';
 include 'config.php';
 ?>
 <! DOCTYPE html>
@@ -11,18 +10,12 @@ include 'config.php';
 
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <h2 class="page-header text-center font">Modifier un profil !</h2>
-        <div class="col-md-5 col-sm-6 col-xs-12">
-        </div>
-    </div>
-</div>
+
 
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-5 ">
                 <form name="insertion" action="modifier_profil1.php" method="POST" class="form-horizontal">
                     <select class="form-control" name="id">
                         <?php
@@ -44,46 +37,44 @@ include 'config.php';
                         <?php };
                         ?>
                     </select>
+                    <br>
                         <!-- debut formulaire-->
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label font">Nom :</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="nom" placeholder="Nom">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Prenom :</label>
-                        <div class="col-sm-10">
+                        <label for="name" class="col-sm-2 control-label">Prenom:</label>
+                        <div class="col-sm-5">
                             <textarea type="text" class="form-control" name="prenom" placeholder="Prénom"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label font">Mail:</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="mail" placeholder="Mail">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label font">Mot de passe:</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="mot_de_passe" placeholder="Mot de passe">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label font">Pseudo :</label>
-                        <div class="col-sm-10">
+                        <label for="name" class="col-sm-2 control-label font">Pseudo:</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="pseudo" placeholder="Pseudo">
                         </div>
                     </div>
 
 
                     <div class="col-md-6 col-md-offset-2">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-md-offset-3">
                             <input id="modifier" name="modifier" type="submit" value="Modifier" class="btn btn-warning">
-                        </div>
-                        <div class="col-md-2">
-                            <a href="supprimer_profil.php"><bouton  id="supprimer" name="supprimer" type="submit"  value="Supprimer" class="btn btn-danger">Supprimer</bouton></a>
                         </div>
                     </div>
                 </form>
