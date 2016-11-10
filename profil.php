@@ -47,6 +47,6 @@ include 'config.php';
         </div>
     </div>
 </div>
-
+<?php include 'modifier_profil.php'?>
 </body>
 </html>
