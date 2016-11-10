@@ -35,7 +35,7 @@ AND publier='oui'";
                     </div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class=" col-md-8 col-lg-8 ">
+                            <div class=" col-md-3 col-lg-8 ">
                                 <table class="table">
                                     <tbody>
                                     <tr>
@@ -50,15 +50,44 @@ AND publier='oui'";
                                 </table>
                             </div>
                         </div>
+
+                        <!-- bouton pour acceder au modal de suppresion des articles -->
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#supprimer">
+                            Mettre un commentaire
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="supprimer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title " id="supprimer">Mettre un commentaire</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?php include"commentaire.php"?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+        </div>
+                    </div>
+
+                </div>
+
                 <?php
             }
             ?>
         </div>
     </div>
 </div>
-<?php include 'commentaire.php'?>
-<?php include 'afficher_commentaire.php' ?>
+
+<?php include'afficher_commentaire.php'?>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
