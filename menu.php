@@ -39,7 +39,9 @@ include 'config.php';
                 echo '<li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
             }
             else{
-                echo  $_SESSION['prenom'] .' '. $_SESSION['nom'] .'<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
+
+                echo $_SESSION['prenom'] .' '. $_SESSION['nom'] .'
+                <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
             }
             ?>
         </ul>

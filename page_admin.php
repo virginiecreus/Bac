@@ -93,10 +93,10 @@ include 'Liste_brouillon.php'; ?>
                 while ($row = mysqli_fetch_array($exec)) {
                 $res[] = $row;
                 ?>
-                <h2>Gestion de l'administrateur</h2>
+                <h2 class ="style">Gestion de l'administrateur</h2>
                 <table class="table">
                     <thead>
-                    <tr>
+                    <tr class="style">
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Email</th>
@@ -107,7 +107,7 @@ include 'Liste_brouillon.php'; ?>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr class="style">
                         <td><?php echo $row['nom']?></td>
                         <td><?php echo $row['prenom']?></td>
                         <td><?php echo $row['mail']?></td>
