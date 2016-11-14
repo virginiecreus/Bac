@@ -9,7 +9,7 @@
 <section class="couleur">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6">
                 <form name="insertion" action="commentaire1.php" method="POST" class="form-horizontal">
                     <select class="form-control" name="titre">
                         <?php
@@ -26,16 +26,17 @@
                         ?>
 
                     </select>
+                    <br>
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Commentaire :</label>
-                        <div class="col-sm-10">
+                        <label for="name" class="col-sm-2 control-label">Commentaire:</label>
+                        <div class="col-sm-6">
                             <textarea type="text" class="form-control" name="commentaire" placeholder="Commentaire"></textarea>
                         </div>
                     </div>
 
 
                     <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
+                        <div class="col-sm-8">
                             <center><input id="ajouter" name="ajouter" type="submit" value="Ajouter" class="btn"></center>
                         </div>
                     </div>
