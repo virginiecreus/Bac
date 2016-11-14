@@ -39,20 +39,13 @@ include 'config.php';
                 echo '<li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
             }
             else{
-                echo '<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
+                echo  $_SESSION['prenom'] .' '. $_SESSION['nom'] .'<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
             }
             ?>
         </ul>
     </div>
 </nav>
 
-<?php
-if ($_SESSION['logged']) {
-echo $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
-}
-else {
- echo 'connectez vous !!!';
-}
-?>
+
 </body>
 </html>
