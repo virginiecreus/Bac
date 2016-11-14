@@ -25,7 +25,7 @@ WHERE utilisateurs_id ";
                 $ress[] = $rows;
                 ?>
 
-                <div class="panel panel-default">
+                <div class="panel panel-success">
                     <div class="panel-heading">
                         <tr>
                             <td>Publié par :</td>
