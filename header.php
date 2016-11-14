@@ -8,6 +8,8 @@ include 'config.php';
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/js/bootstrap.min.js">
+    <script type="text/javascript"></script>
 </head>
 <body>
 
@@ -18,6 +20,8 @@ include 'config.php';
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="header.js"></script>
 
 
 </body>
