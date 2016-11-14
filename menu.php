@@ -11,6 +11,8 @@ include 'config.php';
 </head>
 <body>
 
+<?php include 'header.php' ?>
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
