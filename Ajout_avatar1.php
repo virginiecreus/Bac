@@ -19,7 +19,7 @@ if(isset($_POST["submit"])) {
     }
 }
 
-if(isset($_POST["ajouter"]) && (!empty($_FILES['fileToUpload']))) {
+if(isset($_POST["submit"]) && (!empty($_FILES['fileToUpload']))) {
     $avatar = $_FILES['fileToUpload']['name'];
     $id = $_SESSION['id'];
 
@@ -36,6 +36,7 @@ if (mysqli_query($bdd, $sql)) {
     header('Location: profil.php?rerror');
 }
 var_dump($_FILES['fileToUpload']['name']);
+
 
 
 

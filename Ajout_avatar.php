@@ -9,7 +9,7 @@ include 'config.php';
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
+    <body>
     <div class="container">
         <div class="row">
             <div class="col-md-8 ">
@@ -20,5 +20,5 @@ include 'config.php';
                     <input type="submit" value="Envoyer" name="submit">
                 </form>
 
-</body>
+    </body>
 </html>
