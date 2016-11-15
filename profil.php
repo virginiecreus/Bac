@@ -15,7 +15,10 @@ include 'config.php';
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo $_SESSION["pseudo"]; ?></h3>
+
+                        <img src="https://i60.servimg.com/u/f60/12/70/44/40/walt-d10.gif"  style="width:200px" alt="Karan Singh Sisodia" title="Karan Singh Sisodia" class="img-circle center-block img-responsive"><br>
+
+                    <h3 class="panel-title text-center"><?php echo $_SESSION["pseudo"]; ?></h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -42,6 +45,12 @@ include 'config.php';
                             </table>
                         </div>
                      </div>
+                </div>
+                <div class="panel-footer">
+
+                            <a data-target="#modifier" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        
                 </div>
             </div>
         </div>
