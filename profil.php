@@ -15,8 +15,8 @@ include 'config.php';
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    <img src="uploads/<?php echo $_SESSION['avatar']; ?>" class="img-circle center-block img-responsive"><br>
 
-                        <img src="https://i60.servimg.com/u/f60/12/70/44/40/walt-d10.gif"  style="width:200px" alt="Karan Singh Sisodia" title="Karan Singh Sisodia" class="img-circle center-block img-responsive"><br>
 
                     <h3 class="panel-title text-center"><?php echo $_SESSION["pseudo"]; ?></h3>
                 </div>
@@ -27,19 +27,19 @@ include 'config.php';
                                 <tbody>
                                 <tr>
                                     <td>Nom :</td>
-                                    <td><?php echo strtoupper($_SESSION['nom']); ?></td>
+                                    <td><?php echo $_SESSION['nom']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Prenom :</td>
-                                    <td><?php echo strtoupper($_SESSION['prenom']); ?></td>
+                                    <td><?php echo $_SESSION['prenom']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Email :</td>
-                                    <td><?php echo strtoupper($_SESSION['mail']); ?></td>
+                                    <td><?php echo $_SESSION['mail']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Mot de passe :</td>
-                                    <td><?php echo strtoupper($_SESSION['mot_de_passe']); ?></td>
+                                    <td><?php echo $_SESSION['mot_de_passe']; ?></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -50,7 +50,7 @@ include 'config.php';
 
                             <a data-target="#modifier" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
                             <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                        
+                    <?php include 'Ajout_avatar.php'?>
                 </div>
             </div>
         </div>
