@@ -15,7 +15,7 @@ include 'config.php';
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <img src="uploads/<?php echo $_SESSION['avatar']; ?>" class="img-circle center-block img-responsive"><br>
+                    <img src="uploads/<?php echo $_POST['avatar']; ?>" class="img-circle center-block img-responsive"><br>
 
 
                     <h3 class="panel-title text-center"><?php echo $_SESSION["pseudo"]; ?></h3>

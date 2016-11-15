@@ -68,3 +68,4 @@ if ($uploadOk == 0) {
         echo "Une erreur c'est produite pendant le téléchargement !";
     }
 }
+
