@@ -29,7 +29,7 @@ include 'menu.php'?>;
                         <div class="col-sm-3"><label class="control-label">Utilisateur: </label></div>
                         <div class="col-sm-4">
                             <input class="form-horizontal" type="text" name="mail" placeholder="@mail" required/>
-                        </div>
+                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-3">

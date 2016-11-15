@@ -8,7 +8,7 @@ include 'menu.php'
     <div class="frm-login" style="margin-top: 2px;">
         <div class="frm-head">
             <div class="round round-sm blue"><span class="glyphicon glyphicon-user"></span>
-                <label class="control-label"><h4>Page d'inscription!</h4></label>
+                <label class="control-label"><h4>Page d'inscription! </h4></label>
             </div>
         </div>
         <div class="frm-body">
