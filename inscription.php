@@ -1,60 +1,68 @@
 
 <?php session_start();
-include 'menu.php'
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/js/bootstrap.min.js">
+    <script type="text/javascript" src="connexion.js"></script>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+
+
+</head>
+<body>
 <div class="container">
-    <div class="frm-login" style="margin-top: 2px;">
-        <div class="frm-head">
-            <div class="round round-sm blue"><span class="glyphicon glyphicon-user"></span>
-                <label class="control-label"><h4>Page d'inscription! </h4></label>
-            </div>
-        </div>
-        <div class="frm-body">
-            <form action="inscription1.php" method="post" enctype="multipart/form-data" class="form-horizontal">
-                <div class="form-group">
-                    <label class="control-label col-sm-3">nom</label>
-                    <div class="col-xs-3">
-                        <input class="form-horizontal" type="text" name="nom" placeholder="Abra">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <label  class="control-label col-sm-3">prenom</label>
-                    <div class="col-xs-3">
-                        <input class="form-horizontal" type="text" name="prenom" placeholder="Kadabra">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label   class="control-label col-sm-3">pseudo</label>
-                    <div class="col-xs-3">
-                        <input class="form-horizontal" type="text" name="pseudo" placeholder="Alakazam">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label  class="control-label col-sm-3">Email</label>
-                    <div class="col-xs-3">
-                        <input class="form-horizontal" type="email"  name="mail" placeholder="AbraKadabraAlakazam@hotmail.fr">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Mot de passe</label>
-                    <div class="col-xs-3">
-                        <input class="form-horizontal" type="password" name="mdp" placeholder="">
-                    </div>
-                </div>
-
-
-                <input type="file" name="avatar">
-
-
-                <div class="form-group">
-                    <div class="col-xs-3 col-xs-offset-4">
-                        <input type="submit" name="ajouter" class="btn btn-success">
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div class="row">
+        <h3 class="col-sm-offset-2">Inscription</h3>
     </div>
 </div>
+<hr>
+
+<div class="container">
+    <div class="row">
+
+<form action="inscription1.php" method="post" enctype="multipart/form-data" class="form-horizontal col-sm-offset-1">
+    <div class="form-group">
+        <div class="col-sm-4">
+            <input class="form-horizontal form-control"  type="text" name="nom" placeholder="nom" required>
+        </div>
+    </div>
+    <div class="form-group ">
+        <div class="col-sm-4">
+            <input class="form-horizontal form-control" type="text" name="prenom" placeholder="prenom" required>
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-sm-4">
+            <input class="form-horizontal form-control" type="text" name="pseudo" placeholder="pseudo" required>
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-sm-4">
+            <input class="form-horizontal form-control" type="email"  name="mail" placeholder="email" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-4">
+            <input class="form-horizontal form-control" type="password" name="mdp" placeholder="mot de passe" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-3 col-sm-offset-1">
+            <input type="submit" name="ajouter" class="btn btn-success">
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+
+</body>
+</html>
