@@ -1,5 +1,5 @@
 <?php include 'config.php';
-include 'menu.php'?>;
+//include 'menu.php'?>
 <! DOCTYPE html>
 <html>
 <head>
@@ -13,52 +13,40 @@ include 'menu.php'?>;
 
 
 </head>
-    <body>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<body>
+<div class="container">
+    <div class="row">
+        <h3 class="col-sm-offset-2">Connexion</h3>
+    </div>
+</div>
+<hr>
 
-
+<form action="connexion1.php" method="post" class="form-horizontal">
     <div class="container">
-        <div class="frm-login" style="margin-top: 2px;">
-            <div class="frm-head">
-                <div class="round round-sm blue"><span class="glyphicon glyphicon-user"></span></div>
-                <label class="control-label"><h4>Page de connexion!</h4></label>
-            </div>
-            <div class="frm-body">
-                <form action="connexion1.php" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-3"><label class="control-label">Utilisateur: </label></div>
-                        <div class="col-sm-4">
-                            <input class="form-horizontal" type="text" name="mail" placeholder="@mail" required/>
-                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-3">
-                            <label class="control-label">Mot de passe: </label></div>
-                        <div class="col-sm-4">
-                            <input class="form-horizontal" type="password" name="mot_de_passe" placeholder="@mot de passe" required/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <a href="inscription.php">S'inscrire</a>
-                        <div class="col-sm-2">
+        <div class="row">
 
-                        </div> <input class="btn btn-success" type="submit" name="login" value="Connexion"
-                        </div>
-                    </div>
-                </form>
+
+            <div class="form-group">
+
+                <div class="col-sm-4 col-sm-offset-1">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="mail" >
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-1">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="mot de passe" name="mot_de_passe" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a href="inscription.php">S'inscrire</a>
+                <div class="col-sm-2">
+
+                </div> <input class="btn btn-success" type="submit" name="login" value="Connexion"
             </div>
         </div>
-    </div>
+</form>
 
-    <script>
-        JQuery(document).ready(function(y){
-            JQuery('#lg').click(function(){
-                alert("hello");
-            });
-    </script>
-
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>

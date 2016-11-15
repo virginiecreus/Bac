@@ -29,7 +29,7 @@ include 'config.php';
             else {
                 echo '<li><a href="profil.php">Profil</a></li>';
             }
-                ?>
+            ?>
 
             <?php
             if($_SESSION['logged'] && $_SESSION['role'] == "admin") {
@@ -46,8 +46,40 @@ include 'config.php';
 
             <?php
             if(!$_SESSION['logged']){
-                echo '<li><a href="inscription.php"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>';
-                echo '<li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
+                echo'
+<li><a href="inscription.php" data-toggle="modal" data-target="#inscription" ><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+ <div class="modal fade" id="inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title " id="inscription">Mettre un commentaire</h4>
+                            </div>
+                            <div class="modal-body">
+                            <?php include"inscription.php" ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <li><a href="connexion.php" data-toggle="modal" data-target="#connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+                <div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title " id="connexion">Mettre un commentaire</h4>
+                            </div>
+                            <div class="modal-body">
+                            <?php include"connexion.php" ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>';
             }
             else{
 
@@ -59,6 +91,7 @@ include 'config.php';
     </div>
 </nav>
 
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
