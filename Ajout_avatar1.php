@@ -53,7 +53,7 @@ if ($_FILES["fileToUpload"]["size"] > 500000) {
 // autoriser certain format
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
-    echo "Sul les images au format: jpg, jpeg, png et gif sont autorisé !";
+    echo "Seul les images au format: jpg, jpeg, png et gif sont autorisé !";
     $uploadOk = 0;
 }
 //veifie si l'image à bien été ajouté
@@ -62,7 +62,7 @@ if ($uploadOk == 0) {
 // si toutes les conditions sont bonnes, on ajoute l'image
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "l'image ". basename( $_FILES["fileToUpload"]["name"]). " as bien été upload.";
     } else {
         echo "Une erreur c'est produite pendant le téléchargement !";
     }
