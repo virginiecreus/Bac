@@ -15,6 +15,8 @@ include 'menu.php'?>;
 </head>
     <body>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+
     <div class="container">
         <div class="frm-login" style="margin-top: 2px;">
             <div class="frm-head">
@@ -37,15 +39,17 @@ include 'menu.php'?>;
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-3"></div>
+                        <a href="inscription.php">S'inscrire</a>
                         <div class="col-sm-2">
-                            <input class="btn btn-success" type="submit" name="login" value="LogIn" style="width: 175px;"/>
+
+                        </div> <input class="btn btn-success" type="submit" name="login" value="Connexion"
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <script>
         JQuery(document).ready(function(y){
             JQuery('#lg').click(function(){
@@ -54,7 +58,7 @@ include 'menu.php'?>;
     </script>
 
 
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>
