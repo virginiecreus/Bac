@@ -29,7 +29,7 @@ if(isset($_POST["ajouter"]) && (!empty($_FILES['fileToUpload']))) {
 
 }
 if (mysqli_query($bdd, $sql)) {
-    echo '<center><p class=\'text-danger\'>Votre imahe a bien été ajouté !</p></center>';
+    echo '<center><p class=\'text-danger\'>Votre image a bien été ajouté !</p></center>';
     header('Location: profil.php?ok');
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($bdd);
