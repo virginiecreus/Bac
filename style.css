@@ -6,11 +6,11 @@
     font-family: sans-serif;
     text-transform: uppercase;
 }
-
+/* Partie pour l'image de profil quand on et connecter  */
 .user{
         position: relative;
         top:7px;
-    left: 4px;
+         left: 4px;
         color: white;
          float: right;
 }
@@ -21,6 +21,7 @@
     border-radius: 4em;
 
 }
+/* Fin de la partie image profil*/
 
 .animated {
     animation-duration: 2.5s;

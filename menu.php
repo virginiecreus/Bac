@@ -53,38 +53,46 @@ include 'config.php';
 
             <?php
             if(!$_SESSION['logged']){ ?>
+                <li><a data-toggle="modal" data-target="#inscription"><span class="glyphicon glyphicon-user"></span>
+                        inscription
+                    </a></li>
 
-<li><a href="inscription.php" data-toggle="modal" data-target="#inscription" ><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
- <div class="modal fade" id="inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <!-- Modal -->
+                <div class="modal fade" id="inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title" id="inscription">Inscription</h4>
+                                <h4 class="modal-title " id="inscription">Inscription</h4>
                             </div>
                             <div class="modal-body">
-                            <?php include"inscription.php" ?>
+                                <?php include"inscription.php"?>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <li><a href="connexion.php" data-toggle="modal" data-target="#connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+                <li><a data-toggle="modal" data-target="#connexion"><span class="glyphicon glyphicon-log-in"></span>
+                        connexion
+                    </a></li>
+
+                <!-- Modal -->
                 <div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title" id="connexion">Connexion</h4>
+                                <h4 class="modal-title " id="connexion">Connexion</h4>
                             </div>
-                              <div class="modal-body">
-                                  <?php include"connexion.php" ?>
-                             </div>
-                       </div>
+                            <div class="modal-body">
+                                <?php include"connexion.php"?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             <?php }

@@ -14,38 +14,35 @@
 
 </head>
 <body>
+
 <div class="container">
     <div class="row">
-        <h3 class="col-sm-offset-2">Connexion</h3>
-    </div>
-</div>
-<hr>
-
-<form action="connexion1.php" method="post" class="form-horizontal">
-    <div class="container">
-        <div class="row">
-
+        <form action="connexion1.php" method="post" class="form-horizontal">
 
             <div class="form-group">
-
-                <div class="col-sm-4 col-sm-offset-1">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="mail" >
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-4 col-sm-offset-1">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="mot de passe" name="mot_de_passe" >
+                <i class="glyphicon glyphicon-envelope control-label col-sm-1"></i>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" placeholder="Email" name="mail" required >
                 </div>
             </div>
 
             <div class="form-group">
-                <a href="inscription.php">S'inscrire</a>
+                <i class="glyphicon glyphicon-option-horizontal control-label col-sm-1"></i>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" placeholder="Mot de passe" name="mot_de_passe" required >
+                </div>
+            </div>
+
+            <div class="form-group">
+
                 <div class="col-sm-2">
 
                 </div> <input class="btn btn-success" type="submit" name="login" value="Connexion"
             </div>
-        </div>
-</form>
+
+        </form>
+    </div>
+</div>
 
 </body>
 
