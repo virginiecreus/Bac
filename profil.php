@@ -10,15 +10,24 @@ include 'config.php';
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<?php
+$requete = 'SELECT * FROM utilisateurs
+WHERE id = '.$_SESSION['id'].'
+';
+$exec = mysqli_query($bdd,$requete);
+$res = array();
+while ($row = mysqli_fetch_array($exec)) {
+$res[] = $row;
+?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <img src="uploads/<?php echo $_POST['avatar']; ?>" class="img-circle center-block img-responsive"><br>
+                    <img src="uploads/<?php echo($row['avatar']); ?>" class="img-rounded center-block img-circle" width="100" height="150"><br>
 
 
-                    <h3 class="panel-title text-center"><?php echo $_SESSION["pseudo"]; ?></h3>
+                    <h3 class="panel-title text-center"><?php echo($row['pseudo']); ?></h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -27,19 +36,19 @@ include 'config.php';
                                 <tbody>
                                 <tr>
                                     <td>Nom :</td>
-                                    <td><?php echo $_SESSION['nom']; ?></td>
+                                    <td><?php echo($row['nom']); ?></td>
                                 </tr>
                                 <tr>
                                     <td>Prenom :</td>
-                                    <td><?php echo $_SESSION['prenom']; ?></td>
+                                    <td><?php echo($row['prenom']); ?></td>
                                 </tr>
                                 <tr>
                                     <td>Email :</td>
-                                    <td><?php echo $_SESSION['mail']; ?></td>
+                                    <td><?php echo($row['mail']); ?></td>
                                 </tr>
                                 <tr>
                                     <td>Mot de passe :</td>
-                                    <td><?php echo $_SESSION['mot_de_passe']; ?></td>
+                                    <td><?php echo($row['mot_de_passe']); ?></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -89,6 +98,9 @@ include 'config.php';
         </div>
     </div>
 </div>
+    <?php
+}
+?>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
