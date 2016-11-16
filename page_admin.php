@@ -91,50 +91,50 @@ include 'Liste_brouillon.php'; ?>
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-md-offset-1">
             <div class="well">
                 <h2>Gestion de l'administrateur</h2>
                 <hr>
-
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                        <th>Mot de passe</th>
-                        <th>Avatar</th>
-                        <th>Pseudo</th>
-                        <th>Role</th>
-                    </tr>
-                    </thead>
-                </table>
-
-                <?php
-                $requete = "SELECT * FROM utilisateurs";
-                $exec = mysqli_query($bdd,$requete);
-                $res = array();
-                while ($row = mysqli_fetch_array($exec)) {
-                    $res[] = $row;
-                    ?>
-
+                <div class="table-responsive">
                     <table class="table">
-                        <tbody>
+                        <thead>
                         <tr>
-                            <td><?php echo $row['nom']?></td>
-                            <td><?php echo $row['prenom']?></td>
-                            <td><?php echo $row['mail']?></td>
-                            <td><?php echo $row['mot_de_passe']?></td>
-                            <td><?php echo $row['avatar']?></td>
-                            <td><?php echo $row['pseudo']?></td>
-                            <td><?php echo $row['role']?></td>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Mot de passe</th>
+                            <th>Pseudo</th>
+                            <th>Role</th>
                         </tr>
-                        </tbody>
+                        </thead>
                     </table>
 
                     <?php
-                }
-                ?>
+                    $requete = "SELECT * FROM utilisateurs";
+                    $exec = mysqli_query($bdd,$requete);
+                    $res = array();
+                    while ($row = mysqli_fetch_array($exec)) {
+                        $res[] = $row;
+                        ?>
+
+                        <table class="table">
+
+                            <tbody>
+                            <tr>
+                                <td><?php echo $row['nom']?></td>
+                                <td><?php echo $row['prenom']?></td>
+                                <td><?php echo $row['mail']?></td>
+                                <td><?php echo $row['mot_de_passe']?></td>
+                                <td><?php echo $row['pseudo']?></td>
+                                <td><?php echo $row['role']?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
