@@ -23,7 +23,7 @@ include 'config.php';
 
             }
             else {
-                echo '<img src="img/supprimer_article.jpeg" class="img"><a href="profil.php" class="user"><h4>'.$_SESSION['pseudo'].'</h4></a>';
+                echo '<a href="profil.php" class="user"><h4>'.$_SESSION['pseudo'].'</h4></a>';
             }?>
 
         </div>

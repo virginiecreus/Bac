@@ -60,8 +60,14 @@
     }
 }
 body{
-    background-image: url("img/7030767-3d-background-wallpaper.jpg");
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+.head{
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
 }
 .style{
     color:white;
