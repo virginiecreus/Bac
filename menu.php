@@ -18,10 +18,17 @@ include 'config.php';
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Blog</a>
+            <?php
+            if(!$_SESSION['logged']){
+
+            }
+            else {
+                echo '<img src="img/supprimer_article.jpeg" class="img"><a href="profil.php" class="user"><h4>'.$_SESSION['pseudo'].'</h4></a>';
+            }?>
+
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Accueil</a></li>
+            <li><a href="index.php">Accueil</a></li>
             <li><a href="Afficher_article.php">Blog</a></li>
             <?php if(!$_SESSION['logged']){
 
@@ -45,8 +52,8 @@ include 'config.php';
 
 
             <?php
-            if(!$_SESSION['logged']){
-                echo'
+            if(!$_SESSION['logged']){ ?>
+
 <li><a href="inscription.php" data-toggle="modal" data-target="#inscription" ><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
  <div class="modal fade" id="inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -55,7 +62,7 @@ include 'config.php';
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title " id="inscription">Mettre un commentaire</h4>
+                                <h4 class="modal-title" id="inscription">Inscription</h4>
                             </div>
                             <div class="modal-body">
                             <?php include"inscription.php" ?>
@@ -72,19 +79,18 @@ include 'config.php';
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title " id="connexion">Mettre un commentaire</h4>
+                                <h4 class="modal-title" id="connexion">Connexion</h4>
                             </div>
-                            <div class="modal-body">
-                            <?php include"connexion.php" ?>
-                            </div>
-                        </div>
+                              <div class="modal-body">
+                                  <?php include"connexion.php" ?>
+                             </div>
+                       </div>
                     </div>
-                </div>';
-            }
+                </div>
+            <?php }
             else{
 
-                echo $_SESSION['prenom'] .' '. $_SESSION['nom'].
-                    '<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
+                echo '<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"> Se déconnecter !</span></a></li>';
             }
             ?>
         </ul>
