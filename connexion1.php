@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (empty($_SESSION['logged'])){
+    echo 'mail ou mot de passe incorrect veuillez reessayer merci!!!.';
+}
 include 'config.php';
 
 // On démarre la session
