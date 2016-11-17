@@ -21,8 +21,7 @@ include 'config.php';
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src="header.js"></script>
+
 
 
 </body>

@@ -9,7 +9,6 @@ include 'config.php';
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap/js/bootstrap.min.js">
-    <script type="text/javascript" src="connexion.js"></script>
 </head>
 <body>
 
@@ -24,7 +23,8 @@ include 'config.php';
             }
             else {
                 echo '<a href="profil.php" class="user"><h4>'.$_SESSION['pseudo'].'</h4></a>';
-            }?>
+            }
+            ?>
 
         </div>
         <ul class="nav navbar-nav">
@@ -105,7 +105,7 @@ include 'config.php';
     </div>
 </nav>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>-->
 </body>
 </html>
