@@ -1,4 +1,5 @@
 <?php
+include'config.php';
 
 // On démarre la session
 
