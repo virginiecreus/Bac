@@ -69,6 +69,18 @@ body{
     font-family: 'Bangers', cursive;
     font-size: 60px;
 }
+.titre{
+    font-family: 'Oleo Script', cursive;
+    font-size: 25px;
+    color: #000000;
+}
+.article{
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+}
+.auteur{
+    font-family: 'Coming Soon', cursive;
+}
 .style{
     color:white;
 }
