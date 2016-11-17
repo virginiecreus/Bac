@@ -45,7 +45,7 @@ include 'config.php';
                                          <img src="img/djamel.jpeg" class="thumbnail center-block"
                                                                              alt="Image" />
                                     </div>
-                                    <h1 class="col-xs-6 col-sm-12 col-md-12 text-center" style="color: blue">
+                                    <h1 class="col-xs-6 col-sm-12 col-md-12 text-center" style="color: White">
                                        Djamel
                                     </h1>
                                 </div>
