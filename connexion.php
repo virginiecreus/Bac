@@ -1,7 +1,4 @@
 <?php
-session_start();
-include 'config.php';
-include 'menu.php';
 
 // On démarre la session
 
@@ -51,10 +48,6 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap/js/bootstrap.min.js">
- 
-
-
-
 
 </head>
 <body>
@@ -81,7 +74,7 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
 
                 <div class="col-sm-2">
 
-                </div> <input class="btn btn-success" type="submit" name="login" value="Connexion"
+                </div> <input class="btn btn-success" type="submit" name="login" value="Connexion">
             </div>
 
         </form>

@@ -1,8 +1,4 @@
-<?php session_start();
-include 'config.php'?>
-
-
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -53,13 +49,9 @@ while ($row = mysqli_fetch_array($exec)) {
                                 </table>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <?php
@@ -107,6 +99,6 @@ else{
 
 <?php include'afficher_commentaire.php'?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> -->
 </body>
 </html>

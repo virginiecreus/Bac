@@ -1,8 +1,5 @@
-<?php session_start();
-include 'menu.php';
-include 'config.php';
-?>
-<! DOCTYPE html>
+<?php include 'menu.php';?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -102,7 +99,6 @@ $res[] = $row;
 }
 ?>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

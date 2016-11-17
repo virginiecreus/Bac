@@ -1,8 +1,5 @@
-<?php session_start();
-include 'menu.php';
-include 'config.php';
-?>
 <?php
+include 'menu.php';
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['modifier'])) {
 

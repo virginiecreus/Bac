@@ -1,4 +1,3 @@
-
 <?php session_start();
 ?>
 <!DOCTYPE html>
@@ -8,10 +7,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap/js/bootstrap.min.js">
-    <script type="text/javascript" src="connexion.js"></script>
-
-
-
 
 </head>
 <body>

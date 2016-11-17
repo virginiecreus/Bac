@@ -1,8 +1,4 @@
-<?php session_start();
-include 'config.php';
-?>
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8">
