@@ -21,7 +21,7 @@ include'config.php';?>
             </div>
 
             <div class="form-group">
-                <i class="glyphicon glyphicon-option-horizontal control-label col-sm-1 glyphe"></i>
+                 <i class="glyphicon glyphicon-option-horizontal control-label col-sm-1 glyphe"></i>
                 <div class="col-sm-4">
                     <input type="password" class="form-control" placeholder="Mot de passe" name="mot_de_passe" required >
                 </div>
