@@ -14,7 +14,7 @@ include'config.php';?>
     <div class="row">
         <form action="connexion1.php" method="post" class="form-horizontal" >
             <div class="form-group">
-                <i class="glyphicon glyphicon-envelope control-label col-sm-1"></i>
+                <i class="glyphicon glyphicon-envelope control-label col-sm-1 glyphe"></i>
                 <div class="col-sm-4">
                     <input type="email" class="form-control" placeholder="Email" name="mail" required >
                 </div>
