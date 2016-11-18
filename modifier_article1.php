@@ -5,9 +5,8 @@
 </head>
 
 <body>
-<?php session_start();
-include 'config.php'; ?>
-<?php
+
+<?php include 'config.php';
 
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['modifier'])) {
@@ -29,9 +28,10 @@ if (isset($_POST['modifier'])) {
                                 ");
     // on envoie la requête
     $res = mysqli_query($bdd, $modif);
-    echo "Les données ont bien été modifiées";
-} else { // si champs pas rempli erreur
-    echo "les champs sont vide , reesayez";
+   header('Location:page_admin.php?ModificationReussi');
+}
+else { // si champs pas rempli erreur
+    header('Location:page_admin.php?ErreurModifier');
 }
 ?>
 </body>

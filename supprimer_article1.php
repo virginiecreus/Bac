@@ -1,5 +1,3 @@
-<?php session_start();
-include 'config.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +5,7 @@ include 'config.php';?>
 </head>
 
 <body>
-<?php
+<?php include 'config.php';
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['supprimer'])) {
 
@@ -22,7 +20,12 @@ WHERE id = '$art'
 ");
 // on envoie la requête
     $res = mysqli_query($bdd, $sup);
-    echo "Les données ont bien été supprimées";
+    header('Location:page_admin.php?SuppresionReussi');
+
+
+}
+else{
+    header('Location:page_admin.php?ErreurSuppresion');
 }
 
 ?>
