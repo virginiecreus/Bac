@@ -1,5 +1,4 @@
-<?php session_start();
-include "config.php"; ?>
+<?php include "config.php"; ?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -15,7 +14,7 @@ include "config.php"; ?>
                 <form name="insertion" action="commentaire1.php" method="POST" class="form-horizontal">
                     <select class="form-control" name="titre">
                         <?php
-                        $sql= "SELECT * FROM articles";
+                        $sql= "SELECT * FROM articles WHERE  publier ='oui'";
                         $req = $bdd->query($sql);
 
                         ?>
@@ -30,7 +29,7 @@ include "config.php"; ?>
                     </select>
                     <br>
                     <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Commentaire:</label>
+                        <label for="name"  class="col-sm-2 control-label">Commentaire:</label>
                         <div class="col-sm-6">
                             <textarea type="text" class="form-control" name="commentaire" placeholder="Commentaire"></textarea>
                         </div>

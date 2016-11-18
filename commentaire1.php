@@ -1,5 +1,3 @@
-<?php session_start();
-include"config.php"?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +6,10 @@ include"config.php"?>
 
 <body>
 
-<?php
-include "config.php";
+<?php include"config.php";
 
-// si champs rempli envoyer dans la bdd
+
+// si champs rempli envoye dans la bdd
 if (isset($_POST['ajouter'])) {
 
 
@@ -26,9 +24,9 @@ if (isset($_POST['ajouter'])) {
 // on envoie la requête
     $res = mysqli_query($bdd, $req);
 
-    echo 'Ajouté';
+   header('Location:Afficher_article.php?CommentaireEnvoyer');
 }
 else { // si champs pas rempli erreur
-    echo"les champs sont vide , reesayez";
+   header('Location:Afficher_article.php?Erreur');
 }
 ?>
