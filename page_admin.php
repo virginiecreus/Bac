@@ -13,7 +13,7 @@ include 'menu.php';
 
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-5">
+        <div class="text-center">
             <!-- bouton pour acceder au modal des modification-->
             <a type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#ajouter">
                 <i class="glyphicon glyphicon-pencil"></i>
@@ -84,60 +84,77 @@ include 'menu.php';
         </div>
     </div>
 </div>
+<!-- fin de modale -->
+
 <br>
-<?php include 'Liste_article.php' ;
-include 'Liste_brouillon.php'; ?>
+
+<!-- liste des articles publier et brouillon-->
+<div class="container">
+    <div class="row">
+
+
+        <?php include 'Liste_brouillon.php';
+        include 'Liste_article.php';?>
+    </div>
+</div>
+<!-- fin de la liste des article publier et brouillon -->
+
 <br>
+
+<!-- tableau des de l'admnistrateur -->
+
 <div class="container">
     <div class="row">
         <div class="col-md-9 col-md-offset-1">
-            <div class="well">
+            <div class="panel panel-primary panel-heading text-center titre">
                 <h2>Gestion de l'administrateur</h2>
-                <hr>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prénom</th>
-                            <th>Email</th>
-                            <th>Mot de passe</th>
-                            <th>Pseudo</th>
-                            <th>Role</th>
-                        </tr>
-                        </thead>
-                    </table>
+            </div>
+            <hr>
+            <div class="table-responsive well">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Mot de passe</th>
+                        <th>Pseudo</th>
+                        <th>Role</th>
+                    </tr>
+                    </thead>
+                </table>
 
-                    <?php
-                    $requete = "SELECT * FROM utilisateurs";
-                    $exec = mysqli_query($bdd,$requete);
-                    $res = array();
-                    while ($row = mysqli_fetch_array($exec)) {
-                        $res[] = $row;
-                        ?>
-
-                        <table class="table">
-
-                            <tbody>
-                            <tr>
-                                <td><?php echo $row['nom']?></td>
-                                <td><?php echo $row['prenom']?></td>
-                                <td><?php echo $row['mail']?></td>
-                                <td><?php echo $row['mot_de_passe']?></td>
-                                <td><?php echo $row['pseudo']?></td>
-                                <td><?php echo $row['role']?></td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <?php
-                    }
+                <?php
+                $requete = "SELECT * FROM utilisateurs";
+                $exec = mysqli_query($bdd,$requete);
+                $res = array();
+                while ($row = mysqli_fetch_array($exec)) {
+                    $res[] = $row;
                     ?>
-                </div>
+
+                    <table class="table">
+
+                        <tbody>
+                        <tr>
+                            <td><?php echo $row['nom']?></td>
+                            <td><?php echo $row['prenom']?></td>
+                            <td><?php echo $row['mail']?></td>
+                            <td><?php echo $row['mot_de_passe']?></td>
+                            <td><?php echo $row['pseudo']?></td>
+                            <td><?php echo $row['role']?></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
 </div>
+<!--Fin du tableau des gestion de lasdminstrateur-->
+
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -6,22 +6,22 @@
     font-family: sans-serif;
     text-transform: uppercase;
 }
+
 /* Partie pour l'image de profil quand on et connecter  */
 .user{
         position: relative;
-        top:7px;
-         left: 4px;
+        top: 5px;
         color: white;
-         float: right;
-}
-
-.img{
-        width: 50px;
-        height: 50px;
-    border-radius: 4em;
-
 }
 /* Fin de la partie image profil*/
+
+/*Partie pour la page admin*/
+.article_admin{
+    text-align: center;
+    color: white;
+    border-bottom: solid grey;
+}
+/*Fin de la partie pour la page admin*/
 
 .animated {
     animation-duration: 2.5s;
@@ -135,6 +135,7 @@ body{
 .round.blue {
     background-color: #3EA6CE;
 }
+
 
 /* caroussel */
 
