@@ -16,7 +16,7 @@ if (isset($_POST['supprimer'])) {
 
     $sup = mysqli_query($bdd, "DELETE 
 From articles
-WHERE id = '$art'
+WHERE  id = '$art'
 ");
 // on envoie la requête
     $res = mysqli_query($bdd, $sup);

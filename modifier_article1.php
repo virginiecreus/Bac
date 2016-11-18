@@ -9,12 +9,12 @@
 <?php include 'config.php';
 
 // si champs rempli envoyer dans la bdd
-if (isset($_POST['modifier'])) {
+if (isset($_POST ['modifier'])) {
 
     // on récupére les champs du formulaire
     $titre = $_POST['titre'];
     $article = $_POST['article'];
-    $publier = htmlspecialchars($_POST['publier']);
+    $publier =($_POST['publier']);
     $users = $_SESSION['id'];
     $art = $_POST['art'];
 
