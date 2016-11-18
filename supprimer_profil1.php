@@ -1,5 +1,4 @@
-<?php session_start();
-include 'config.php';?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +7,7 @@ include 'config.php';?>
 
 <body>
 <?php
+include 'config.php';
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['supprimer'])) {
 
@@ -16,13 +16,14 @@ if (isset($_POST['supprimer'])) {
 
 // On créé la requête
 
-    $sup = mysqli_query($bdd, "DELETE 
-From utilisateurs
-WHERE id = '$id'
-");
+    $sup = "DELETE From utilisateurs WHERE id = '$id'";
+
 // on envoie la requête
     $res = mysqli_query($bdd, $sup);
-    echo "Les données ont bien été supprimées";
+    header('Location:profil.php?SuppresionReussi');
+}
+else{
+    header('Location:profil.php?ErreurSuppresion');
 }
 
 ?>

@@ -29,7 +29,7 @@ include'config.php';?>
 
             <div class="form-group">
 
-                <div class="col-sm-2 col-sm-offset-3 col-xs-offset-3 ">
+                <div class="col-sm-2 col-sm-offset-2 col-xs-offset-3 ">
                     <input class="button " type="submit" name="login" value="Connexion">
                 </div>
             </div>

@@ -15,31 +15,10 @@ include 'config.php';
         <div class="row">
             <div class="col-md-4 col-md-offset-1">
                 <form name="insertion" action="supprimer_profil1.php" method="POST" class="form-horizontal">
-                    <select class="form-control" name="id">
-                        <?php
-                        //si il manque pas id et qu'il est pas vide
-                        if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
-                            $id=$_SESSION['id'];
+                    <br> <p style="color: white">Etes vous sur de vouloir supprimer ce compte ?</p>
+                    <div class="col-md-6 col-md-offset-3 col-xs-offset-4">
 
-                        }
-
-                        $sql= "SELECT * FROM utilisateurs WHERE id = $id";
-                        $req = $bdd->query($sql);
-                        ?>
-                        <?php
-                        // on envoie la requête
-                        while ($req1 = mysqli_fetch_object($req)) { ?>
-                            <option value="<?php echo $req1->id ?>"><?php echo $req1->pseudo ?></option>
-
-                        <?php };
-                        ?>
-                    </select>
-                    <br>
-                    <div class="col-md-6 col-md-offset-2">
-                        <div class="col-md-2">
                             <input id="supprimer" name="supprimer" type="submit" value="Supprimer" class="btn btn-danger">
-                        </div>
-
                     </div>
                 </form>
             </div>

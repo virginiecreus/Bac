@@ -39,7 +39,7 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
     }
 }else{
     $_SESSION['logged'] = false;
-    header("Location:connexion.php?error");
+    header("Location:index.php?erreurconnexion");
     /**var_dump($_SESSION);**/
 
 }

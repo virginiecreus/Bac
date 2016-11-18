@@ -1,5 +1,4 @@
-<?php
-include 'menu.php';
+<?php include'config.php';
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['modifier'])) {
 
@@ -9,7 +8,7 @@ if (isset($_POST['modifier'])) {
     $mail =(string) $_POST['mail'];
     $mdp= (string)$_POST['mot_de_passe'];
     $pseudo = (string)$_POST['pseudo'];
-    $id = (int )$_POST['id'];
+    $id =$_SESSION['id'];
 
     // On créé la requête
 
@@ -21,14 +20,10 @@ if (isset($_POST['modifier'])) {
     // on envoie la requête
     $res = mysqli_query($bdd, $modif);
 
-    if(mysqli_query($bdd, $modif)==true){
-        echo "Les données ont bien été modifiées";
+        header('Location:profil.php?ModificationReussi');
 
-    } else{
-        echo mysqli_error($bdd);
     }
-
-
-
+    else{
+        header('Location:profil?php?Erreur');
 }
 ?>

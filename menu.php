@@ -1,6 +1,3 @@
-<?php session_start();
-include 'config.php';
-?>
 <!DOCTYPE html>
 
 <html>
@@ -9,10 +6,14 @@ include 'config.php';
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap/js/bootstrap.min.js">
+    <link href='https://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<?php include 'header.php' ?>
+<?php include 'header.php';
+include 'config.php';?>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -63,7 +64,7 @@ include 'config.php';
                         <div class="modal-content">
                             <div class="modal-header header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true" style="color: white">&times;</span>
                                 </button>
                                 <h4 style="color: white" class="modal-title titre text-center" id="inscription">Inscription</h4>
                             </div>
@@ -86,7 +87,7 @@ include 'config.php';
                             <div class="modal-header text-center header">
 
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true" style=color:white>&times;</span>
                                 </button>
                                 <h4 style="color: white" class="modal-title titre "  id="connexion">Connexion</h4>
                             </div>

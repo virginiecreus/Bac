@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row">
 
-        <form action="inscription1.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <form action="inscription1.php" method="post"  class="form-horizontal">
             <div class="form-group">
                 <i class="glyphe glyphicon glyphicon-user control-label col-sm-1"></i>
                 <div class="col-sm-4">

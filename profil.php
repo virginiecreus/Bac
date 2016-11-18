@@ -59,13 +59,13 @@ $res[] = $row;
                     <div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                                        <span aria-hidden="true" style="color: white">&times;</span>
                                     </button>
-                                    <h4 class="modal-title" id="modifier">Modification</h4>
+                                    <h4 style="color: white" class="modal-title text-center titre text " id="modifier">Modification</h4>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body body">
                                     <?php include"modifier_profil.php"?>
                                 </div>
                             </div>
@@ -77,13 +77,13 @@ $res[] = $row;
                     <div class="modal fade" id="supprime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                                        <span aria-hidden="true" style="color: white">&times;</span>
                                     </button>
-                                    <h4 class="modal-title" id="supprime">Modification</h4>
+                                    <h4 class="modal-title text-center text-center titre " style="color: white" id="supprime">Supprimer</h4>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body body">
                                     <?php include"supprimer_profil.php"?>
                                 </div>
                             </div>

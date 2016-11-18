@@ -5,10 +5,8 @@
 </head>
 
 <body>
-<?php session_start();
-include 'config.php';
-?>
-<?php
+
+<?php include 'config.php';
 
 // si champs rempli envoyer dans la bdd
 if (isset($_POST['titre']) && isset($_POST['article'])) {
@@ -26,9 +24,9 @@ VALUES ('$titre', '$article', '$users', '$publier')";
 // on envoie la requête
     $res = mysqli_query($bdd, $req);
 
-    echo 'Les données ont bien été Ajoutées';
+    header('Location:page_admin.php?AjoutReussi');
 } else { // si champs pas rempli erreur
-    echo "les champs sont vide , reesayez";
+    header('Location:page_admin.php?ErreurAjout');
 }
 
 ?>

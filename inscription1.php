@@ -23,11 +23,11 @@
 mysqli_query($bdd,$req);
 
  echo'Ajouté';
-     header('Location: index.php ');
+     header('Location: index.php?InscriptionReussi ');
 
    }
 else{
-    echo"erreur";
+   header('Location:index.php?ErreurInscription');
 }
 
 ?>
