@@ -6,11 +6,11 @@
 </head>
 
 <body>
-<?php session_start();
-include 'config.php';
+<?php include 'config.php';
 ?>
 
 <?php
+$id =$_SESSION['id'];
 
 if ($_FILES['image']['error']) {
     switch ($_FILES['image']['error']){
@@ -44,9 +44,9 @@ else {
     }
 }
 
-$requete = "INSERT INTO articles (image, titre_article, article , utilisateurs_id, publier ) VALUES ('".$_FILES['image']['name']."','".htmlentities(addslashes($_POST['titre']), ENT_QUOTES)."','".htmlentities (addslashes($_POST['article']) , ENT_QUOTES)."','".htmlentities(addslashes($_POST['utilisateurs_id']), ENT_QUOTES)."' ,'".htmlentities(addslashes($_POST['publier']), ENT_QUOTES)."')";
+$requete = "INSERT INTO articles (image, titre_article, article , utilisateurs_id, publier ) VALUES ('".$_FILES['image']['name']."','".htmlentities(addslashes($_POST['titre']), ENT_QUOTES)."','".htmlentities (addslashes($_POST['article']) , ENT_QUOTES)."','".htmlentities(addslashes($id), ENT_QUOTES)."' ,'".htmlentities(addslashes($_POST['publier']), ENT_QUOTES)."')";
 $resultat = mysqli_query($bdd,$requete);
-$identifiant = mysqli_insert_id($bdd);
+
 /* Fermeture de la connexion */
 mysqli_close($bdd);
 
