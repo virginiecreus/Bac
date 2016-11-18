@@ -9,6 +9,7 @@
 <?php session_start();
 include 'config.php';
 ?>
+
 <?php
 
 if ($_FILES['image']['error']) {

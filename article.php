@@ -11,6 +11,7 @@ include 'config.php';
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <h2>Nouvel article</h2>
 <form action="article1.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
     <div class="form-group">
