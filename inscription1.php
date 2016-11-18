@@ -23,7 +23,7 @@
 mysqli_query($bdd,$req);
 
  echo'Ajouté';
-     header('Location: index.php ');
+     header('Location: index.php?InscriptionReussi ');
 
    }
 else{

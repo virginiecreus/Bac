@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'config.php';
 
 // On démarre la session
@@ -37,10 +36,12 @@ if (isset($_POST) && (!empty($_POST['mail'])) && (!empty($_POST['mot_de_passe'])
             /**var_dump($_SESSION);**/
         }
     }
-}else{
+
+else{
     $_SESSION['logged'] = false;
-    header("Location:connexion.php?error");
+    header("Location:index.php?error");
     /**var_dump($_SESSION);**/
 
+}
 }
 ?>
