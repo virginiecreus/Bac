@@ -12,7 +12,7 @@ include'config.php';?>
 
 <div class="container">
     <div class="row">
-        <form action="connexion1.php" method="post" class="form-horizontal">
+        <form action="connexion1.php" method="post" class="form-horizontal" >
             <div class="form-group">
                 <i class="glyphicon glyphicon-envelope control-label col-sm-1"></i>
                 <div class="col-sm-4">
@@ -21,7 +21,7 @@ include'config.php';?>
             </div>
 
             <div class="form-group">
-                <i class="glyphicon glyphicon-option-horizontal control-label col-sm-1"></i>
+                <i class="glyphicon glyphicon-option-horizontal control-label col-sm-1 glyphe"></i>
                 <div class="col-sm-4">
                     <input type="password" class="form-control" placeholder="Mot de passe" name="mot_de_passe" required >
                 </div>
@@ -31,7 +31,7 @@ include'config.php';?>
 
                 <div class="col-sm-2">
 
-                </div> <input class="btn btn-success" type="submit" name="login" value="Connexion">
+                </div> <input class="button" type="submit" name="login" value="Connexion">
             </div>
 
         </form>
