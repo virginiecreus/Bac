@@ -61,13 +61,13 @@ include 'config.php';
                 <div class="modal fade" id="inscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
+                            <div class="modal-header header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title " id="inscription">Inscription</h4>
+                                <h4 style="color: white" class="modal-title titre text-center" id="inscription">Inscription</h4>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body body">
                                 <?php include"inscription.php"?>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ include 'config.php';
 
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header text-center" style="background-color: rgba(5, 9, 112, 0.7) ">
+                            <div class="modal-header text-center header">
 
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -91,7 +91,7 @@ include 'config.php';
                                 <h4 style="color: white" class="modal-title titre "  id="connexion">Connexion</h4>
                             </div>
 
-                            <div class="modal-body" style="background-color: rgba(46, 46, 46, 0.71)">
+                            <div class="modal-body body">
                                 <?php include"connexion.php"?>
                             </div>
                         </div>

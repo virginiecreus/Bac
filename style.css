@@ -6,8 +6,17 @@
     font-family: sans-serif;
     text-transform: uppercase;
 }
-.glyphe{
-     color: white;
+
+.header{
+    background-color: rgba(5, 9, 112, 0.7);
+}
+
+.body {
+        background-color:  rgba(46, 46, 46, 0.71);
+}
+
+.glyphe {
+     color:white;
 }
 /* bouton*/
 .button {
