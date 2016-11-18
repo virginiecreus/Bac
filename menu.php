@@ -83,13 +83,15 @@ include 'config.php';
 
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
+                            <div class="modal-header text-center" style="background-color: rgba(5, 9, 112, 0.7) ">
+
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title " id="connexion">Connexion</h4>
+                                <h4 style="color: white" class="modal-title titre "  id="connexion">Connexion</h4>
                             </div>
-                            <div class="modal-body">
+
+                            <div class="modal-body" style="background-color: rgba(46, 46, 46, 0.71)">
                                 <?php include"connexion.php"?>
                             </div>
                         </div>
