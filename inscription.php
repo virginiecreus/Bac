@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="bootstrap/js/bootstrap.min.js">
-
+    <title>Inscription</title>
 </head>
 <body>
 

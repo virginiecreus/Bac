@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="caroussel.js"></script>
+    <title>Page d'accueil</title>
 </head>
 <body>
 <?php include'menu.php'?>

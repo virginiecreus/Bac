@@ -218,3 +218,37 @@ a {  cursor:pointer;}
 }
 
 /* fin caroussel */
+
+/* Article du blog */
+
+.outerpadding{
+    padding:10% 0%;}
+.boximg{
+    position:relative;
+    overflow:hidden;
+}
+
+.boximg img{
+    transition:all ease-in 500ms;
+    border:1px solid #fff;
+}
+.boximg img:hover{
+    transform:scale(1.3,1.3);
+    cursor:pointer;
+
+}
+
+.boximg:hover{
+    border:1px solid #fff;
+}
+
+.boximg:hover .date{
+    opacity:1;
+
+}
+.boximg:hover .likebut{
+    opacity:1;
+
+}
+
+/* fin article blog */

@@ -6,6 +6,7 @@ include 'config.php';
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Ajouter un article</title>
 
 </head>
 <body>
