@@ -30,8 +30,9 @@ AND publier='oui'";
             <div class="panel panel-primary">
                 <div class="panel-heading titre text-center">
                     <tr>
-                        <td>Titre :</td>
+                        <td>Titre:</td>
                         <td><?php echo strtoupper($row['titre_article']); ?></td>
+                        <a class="btn btn-primary" href="publier_1.php?id=<?= $row['titre_article'] ?>" >X</a>
                     </tr>
                 </div>
                 <div class="panel-body">
@@ -40,11 +41,11 @@ AND publier='oui'";
                             <table class="table">
                                 <tbody>
                                 <tr class="article">
-                                    <td>Article :</td>
+                                    <td>Article:</td>
                                     <td><?php echo($row['article']); ?></td>
                                 </tr>
                                 <tr class="auteur">
-                                    <td>Publié par :</td>
+                                    <td>Publié par:</td>
                                     <td><?php echo($row['pseudo']); ?></td>
                                 </tr>
                                 </tbody>

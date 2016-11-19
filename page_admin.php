@@ -106,35 +106,31 @@ include 'menu.php';
 <div class="container">
     <div class="row">
         <div class="col-md-9 col-md-offset-1">
-            <div class="panel panel-primary panel-heading text-center titre">
+            <div class="panel panel-primary panel-heading text-center titre" style="background:#3EA6CE; color:white;">
                 <h2>Gestion de l'administrateur</h2>
             </div>
             <hr>
             <div class="table-responsive well">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                        <th>Mot de passe</th>
-                        <th>Pseudo</th>
-                        <th>Role</th>
-                    </tr>
-                    </thead>
-                </table>
-
-                <?php
-                $requete = "SELECT * FROM utilisateurs";
-                $exec = mysqli_query($bdd,$requete);
-                $res = array();
-                while ($row = mysqli_fetch_array($exec)) {
-                    $res[] = $row;
-                    ?>
-
                     <table class="table">
-
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Mot de passe</th>
+                            <th>Pseudo</th>
+                            <th>Role</th>
+                        </tr>
+                        </thead>
                         <tbody>
+                        <?php
+                        $requete = "SELECT * FROM utilisateurs";
+                        $exec = mysqli_query($bdd,$requete);
+                        $res = array();
+                        while ($row = mysqli_fetch_array($exec)) {
+                        $res[] = $row;
+                        ?>
+
                         <tr>
                             <td><?php echo $row['nom']?></td>
                             <td><?php echo $row['prenom']?></td>
@@ -143,11 +139,11 @@ include 'menu.php';
                             <td><?php echo $row['pseudo']?></td>
                             <td><?php echo $row['role']?></td>
                         </tr>
+                            <?php
+                        }
+                        ?>
                         </tbody>
                     </table>
-                    <?php
-                }
-                ?>
             </div>
         </div>
     </div>

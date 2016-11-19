@@ -7,8 +7,9 @@ date_default_timezone_set('UTC');
 
 define('NOM_DB' , 'bac');
 define('UTILISATEUR_DB' , 'root');
-define('MDP_DB' , '311286');
+define('MDP_DB' , 'amine88000');
 
 
-$bdd = mysqli_connect("localhost", "root", "311286", "bac");
+$bdd = mysqli_connect("localhost", "root", "amine88000", "bac");
+session_start();
 ?>

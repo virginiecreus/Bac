@@ -28,7 +28,7 @@ WHERE utilisateurs_id ";
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <tr>
-                            <td>Publié par :</td>
+                            <td>Publié par:</td>
                             <td><?php echo($rows['pseudo']); ?></td>
                             <br>
                             <td><?php echo ($rows['commentaire']); ?></td>
