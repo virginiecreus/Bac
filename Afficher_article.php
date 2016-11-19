@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php session_start();
+include 'config.php'?>
+
+
+<! DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -10,8 +14,6 @@
 </head>
 <body>
 <?php include 'menu.php'?>
-
-
 <?php
 // Requetes Sql pour afficher les article publier avec le pseudo
 $requete = "SELECT * FROM articles
@@ -26,90 +28,89 @@ while ($row = mysqli_fetch_array($exec)) {
 
     $res[] = $row;
     ?>
-    <!--Tableau  de l'article-->
+
+
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-                <div class="panel panel-primary">
-                    <div class="panel-heading titre text-center">
-                        <tr>
-                            <td>Titre:</td>
-                            <td><?php echo ($row['titre_article']); ?></td>
-                        </tr>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="MakaleYazariAdi">Titre :<?php echo ($row['titre_article']); ?></a>
+                <div class="btn-group" style="float:right;">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="uploads_articles/<?php echo($row['image']); ?>" class="img-rounded center-block " width="100" height="150">
+                        </a>
                     </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class=" col-md-3 col-lg-8 ">
-                                <table class="table">
-                                    <tbody>
-                                    <tr class="article">
-                                        <td>Article:</td>
-                                        <td><?php echo($row['article']); ?></td>
-                                    </tr>
-                                    <tr class="auteur">
-                                        <td>Publié par:</td>
-                                        <td><?php echo($row['pseudo']); ?></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <div class="media-body">
+                        <?php echo($row['article']); ?>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
+        <div class="panel-footer">
+            <a href="#" class="MakaleYazariAdi">Posté par :<?php echo ($row['pseudo']); ?></a>
+        </div>
         </div>
     </div>
 
-    <!-- fin de tableau-->
     <?php
 }
-// fin de la boucle
 ?>
 
 
 <?php
-//Si il n'y a pas de compte connecter alors il n'affiche rien
 if(!$_SESSION['logged']){
 
 }
-//Sinon si le compte et connecter alors il affiche la modales commentaire
-else{ ?>
-    <div class="contenaire">
-        <div class="row">
-            <div class="col-md-offset-5">
-                <!-- bouton de la modale pour mettre un commentaire -->
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commentaire">
-                    Mettre un commentaire
+else{
+    echo'<div class="contenaire">
+    <div class="row">
+        <div class="col-md-offset-5">
+
+
+            <!-- bouton pour acceder au modal de suppresion des articles -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commentaire">
+                Mettre un commentaire
+            </button>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="commentaire" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
                 </button>
+                <h4 class="modal-title " id="commentaire">Mettre un commentaire</h4>
+            </div>
+            <div class="modal-body">
+                <?php include"commentaire.php"?>
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="commentaire" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title " id="commentaire">Mettre un commentaire</h4>
-                </div>
-                <div class="modal-body">
-                    <?php include"commentaire.php"?>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <!-- Fin de la modale -->
-    <?php
+</div>
+<br>';
 }
 ?>
 
 
-
 <?php include'afficher_commentaire.php'?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script> -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

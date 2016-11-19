@@ -14,50 +14,49 @@ include 'config.php';
 <body>
 
 
-<div
-    class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xs-offset-0 col-sm-offset-0 col-md-offset-2 col-lg-offset-2 toppad">
-    <h3 class="article_admin">Publier</h3>
-    <?php
-    // Requete sql pour afficher les articles seulement publier
-    $requete = "SELECT * FROM articles
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xs-offset-0 col-sm-offset-0 col-md-offset-2 col-lg-offset-2 toppad" >
+        <h3 class="article_admin">Publier</h3>
+        <?php
+        // Requete sql pour afficher les articles seulement publier
+        $requete = "SELECT * FROM articles
 INNER JOIN utilisateurs
 WHERE utilisateurs.id = articles.utilisateurs_id
 AND publier='oui'";
-    $exec = mysqli_query($bdd, $requete);
-    $res = array();
-    while ($row = mysqli_fetch_array($exec)) {
-        $res[] = $row; ?>
+        $exec = mysqli_query($bdd,$requete);
+        $res = array();
+        while ($row = mysqli_fetch_array($exec)) {
+            $res[] = $row;?>
 
-        <div class="panel panel-primary">
-            <div class="panel-heading titre text-center">
-                <tr>
-                    <td>Titre:</td>
-                    <td><?php echo strtoupper($row['titre_article']); ?></td>
-                    <a class="btn btn-primary" href="publier_1.php?id=<?= $row['titre_article'] ?>">X</a>
-                </tr>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class=" col-md-8 col-lg-8 ">
-                        <table class="table">
-                            <tbody>
-                            <tr class="article">
-                                <td>Article:</td>
-                                <td><?php echo($row['article']); ?></td>
-                            </tr>
-                            <tr class="auteur">
-                                <td>Publié par:</td>
-                                <td><?php echo($row['pseudo']); ?></td>
-                            </tr>
-                            </tbody>
-                        </table>
+            <div class="panel panel-primary">
+                <div class="panel-heading titre text-center">
+                    <tr>
+                        <td>Titre:</td>
+                        <td><?php echo strtoupper($row['titre_article']); ?></td>
+                        <a class="btn btn-primary" href="publier_1.php?id=<?= $row['titre_article'] ?>" >X</a>
+                    </tr>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class=" col-md-8 col-lg-8 ">
+                            <table class="table">
+                                <tbody>
+                                <tr class="article">
+                                    <td>Article:</td>
+                                    <td><?php echo($row['article']); ?></td>
+                                </tr>
+                                <tr class="auteur">
+                                    <td>Publié par:</td>
+                                    <td><?php echo($row['pseudo']); ?></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+            <?php
+        }?>
         </div>
-        <?php
-    } ?>
-</div>
 </body>
 </html>
 
