@@ -17,8 +17,7 @@ if (isset($_GET ['id'])) {
     // on envoie la requête
     $res = mysqli_query($bdd, $modif);
     header('Location:page_admin.php?ModificationReussi');
-}
-else { // si champs pas rempli erreur
+} else { // si champs pas rempli erreur
     header('Location:page_admin.php?ErreurModifier');
 }
 ?>

@@ -13,14 +13,14 @@ include 'config.php';
 </head>
 <body>
 
-<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xs-offset-0 col-sm-offset-0  toppad" >
+<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xs-offset-0 col-sm-offset-0  toppad">
     <h3 class="article_admin">Brouillon</h3>
     <?php
     $requete = "SELECT * FROM articles
 INNER JOIN utilisateurs
 WHERE utilisateurs.id = articles.utilisateurs_id
 AND publier='non'";
-    $exec = mysqli_query($bdd,$requete);
+    $exec = mysqli_query($bdd, $requete);
     $res = array();
     while ($row = mysqli_fetch_array($exec)) {
         $res[] = $row;
@@ -33,7 +33,7 @@ AND publier='non'";
                 <tr>
                     <td>Titre:</td>
                     <td><?php echo strtoupper($row['titre_article']); ?></td>
-                    <a class="btn btn-primary" href="publier_2.php?id=<?= $row['titre_article'] ?>" >V</a>
+                    <a class="btn btn-primary" href="publier_2.php?id=<?= $row['titre_article'] ?>">V</a>
                 </tr>
             </div>
             <div class="panel-body">
