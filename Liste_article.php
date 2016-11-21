@@ -30,7 +30,7 @@ AND publier='oui'";
                 <div class="panel-heading titre text-center">
                     <tr>
                         <td>Titre:</td>
-                        <td><?php echo strtoupper($row['titre_article']); ?></td>
+                        <td><?php echo ($row['titre_article']); ?></td>
                         <a style="color: rgba(255, 8, 20, 0.48)" class="glyphicon glyphicon-download" href="publier_1.php?id=<?= $row['titre_article'] ?>" ></a>
                     </tr>
                 </div>
@@ -39,10 +39,6 @@ AND publier='oui'";
                         <div class=" col-md-8 col-lg-8 ">
                             <table class="table">
                                 <tbody>
-                                <tr class="article">
-                                    <td>Article:</td>
-                                    <td><?php echo($row['article']); ?></td>
-                                </tr>
                                 <tr class="auteur">
                                     <td>Publié par:</td>
                                     <td><?php echo($row['pseudo']); ?></td>
