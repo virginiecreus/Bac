@@ -78,7 +78,7 @@ if(!$_SESSION['logged']){
 else{ ?>
    <div class="container">
     <div class="row">
-        <div class="col-md-offset-5">
+        <div class=" col-xs-offset-3 col-md-offset-5">
 
 
             <!-- bouton pour acceder au modal de suppresion des articles -->
