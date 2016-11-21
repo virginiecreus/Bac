@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_array($exec)) {
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <p class="titre text-center" ;">Titre :<?php echo ($row['titre_article']); ?></p>
+                <p class="titre text-center" ;">Titre : <?php echo ($row['titre_article']); ?></p>
 
                <!-- <div class="btn-group" style="float:right;">
 
@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_array($exec)) {
                 </div>
             </div>
         <div class="panel-footer">
-            <p class="auteur">Posté par :<?php echo ($row['pseudo']); ?></p>
+            <p class="auteur">Posté par : <?php echo ($row['pseudo']); ?></p>
         </div>
         </div>
     </div>
