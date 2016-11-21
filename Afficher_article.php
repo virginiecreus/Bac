@@ -83,7 +83,7 @@ else{ ?>
 
             <!-- bouton pour acceder au modal de suppresion des articles -->
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#commentaire">
-                Mettre un commentaire
+                 Mettre un commentaire
             </button>
         </div>
     </div>
