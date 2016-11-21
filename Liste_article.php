@@ -1,5 +1,4 @@
-<?php session_start();
-include 'config.php';
+<?php include 'config.php';
 ?>
 <! DOCTYPE html>
 <html>
@@ -32,7 +31,7 @@ AND publier='oui'";
                     <tr>
                         <td>Titre:</td>
                         <td><?php echo strtoupper($row['titre_article']); ?></td>
-                        <a class="btn btn-primary" href="publier_1.php?id=<?= $row['titre_article'] ?>" >X</a>
+                        <a style="color: rgba(255, 8, 20, 0.48)" class="glyphicon glyphicon-trash" href="publier_1.php?id=<?= $row['titre_article'] ?>" ></a>
                     </tr>
                 </div>
                 <div class="panel-body">

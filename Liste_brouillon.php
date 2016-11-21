@@ -33,7 +33,7 @@ AND publier='non'";
                 <tr>
                     <td>Titre:</td>
                     <td><?php echo strtoupper($row['titre_article']); ?></td>
-                    <a class="btn btn-primary" href="publier_2.php?id=<?= $row['titre_article'] ?>" >V</a>
+                    <a style="color: rgba(0, 255, 0, 0.49)" class="glyphicon glyphicon-upload" href="publier_2.php?id=<?= $row['titre_article'] ?>" ></a>
                 </tr>
             </div>
             <div class="panel-body">

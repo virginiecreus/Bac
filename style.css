@@ -13,7 +13,18 @@
 
 .body {
         background-color:  rgba(46, 46, 46, 0.71);
+
 }
+ /* page profil */
+.profil_header{
+                background-color: #431a75;
+}
+
+.profil_body{
+    background-color: #5b5b87;
+}
+
+/*fin page profil */
 
 .glyphe {
      color:white;
@@ -109,7 +120,7 @@ body{
 .titre{
     font-family: 'Oleo Script', cursive;
     font-size: 25px;
-    color: #000000;
+    color: white;
 }
 
 

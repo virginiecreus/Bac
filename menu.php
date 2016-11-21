@@ -66,7 +66,7 @@ include 'config.php';?>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true" style="color: white">&times;</span>
                                 </button>
-                                <h4 style="color: white" class="modal-title titre text-center" id="inscription">Inscription</h4>
+                                <h4 class="modal-title titre text-center" id="inscription">Inscription</h4>
                             </div>
                             <div class="modal-body body">
                                 <?php include"inscription.php"?>
@@ -89,7 +89,7 @@ include 'config.php';?>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true" style=color:white>&times;</span>
                                 </button>
-                                <h4 style="color: white" class="modal-title titre "  id="connexion">Connexion</h4>
+                                <h4  class="modal-title titre "  id="connexion">Connexion</h4>
                             </div>
 
                             <div class="modal-body body">

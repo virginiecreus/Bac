@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<section class="couleur">
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -38,11 +38,12 @@
 
                     <div class="form-group">
                         <div class="col-sm-8">
-                            <center><input id="ajouter" name="ajouter" type="submit" value="Ajouter" class="btn"></center>
+                            <center><input id="ajouter" name="ajouter" type="submit" value="Ajouter" class="button"></center>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</section>
+</body>
+</html>

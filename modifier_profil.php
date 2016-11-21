@@ -43,7 +43,7 @@ include 'config.php';
             <div class="form-group">
                 <i class="glyphe glyphicon glyphicon-option-horizontal control-label col-sm-1"></i>
                 <div class="col-sm-4">
-                    <input class="form-horizontal form-control" type="password" name="mdp" placeholder="mot de passe">
+                    <input class="form-horizontal form-control" type="text" name="mot_de_passe" placeholder="mot de passe">
                 </div>
             </div>
 

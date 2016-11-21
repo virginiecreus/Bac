@@ -1,15 +1,16 @@
-<?php session_start();
-include 'menu.php';
-?>
+
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Admin</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <title>Page admin</title>
+
 </head>
 <body>
-
+<?php
+include 'menu.php';
+?>
 
 <div class="container">
     <div class="row">
@@ -23,13 +24,13 @@ include 'menu.php';
             <div class="modal" id="ajouter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true" style="color: white">&times;</span>
                             </button>
-                            <h4 class="modal-title" id="ajouter">Ajouter un article</h4>
+                            <h4   class="modal-title titre text-center" id="ajouter">Ajouter un article</h4>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body body">
                             <?php include"article.php"?>
                         </div>
                     </div>
@@ -45,13 +46,13 @@ include 'menu.php';
             <div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span style="color: white" aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title " id="modifer">Modifier un article</h4>
+                            <h4 class="modal-title titre text-center" id="modifer">Modifier un article</h4>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body body">
                             <?php include"modifier_article.php"?>
                         </div>
                     </div>
@@ -69,13 +70,13 @@ include 'menu.php';
             <div class="modal fade" id="supprimer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span style="color: white" aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title " id="supprimer">Supprimer un article </h4>
+                            <h4 class="modal-title titre text-center" id="supprimer">Supprimer un article </h4>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body body">
                             <?php include"supprimer_article.php"?>
                         </div>
                     </div>

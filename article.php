@@ -11,38 +11,43 @@ include 'config.php';
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h2>Nouvel article</h2>
+<h2 class="titre">Nouvel article</h2>
+
+<br>
+
 <form action="article1.php" method="POST" enctype="multipart/form-data" class="form-horizontal">
     <div class="form-group">
-        <label for="name" class="col-sm-2 control-label font">Titre de l'article</label>
+        <label for="name" class="col-sm-4 control-label font">Titre de l'article :</label>
         <div class="col-sm-4">
             <input type="text" class="form-control" name="titre" placeholder="Titre" />
         </div>
     </div>
 
     <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Texte :</label>
+        <label for="name" class="col-sm-4 control-label">Texte :</label>
         <div class="col-sm-5">
             <textarea type="text" class="form-control" name="article" rows="10" cols="50" placeholder="Article"></textarea>
         </div>
     </div>
 
-    <div>
-        <div class="col-lg-offset-1"><a>Publier :</a>
-            <label for="name" class="control-label font">Oui</label>
-            <input  type="radio" name="publier" value="oui" >
+    <p><strong>Publier :</strong>
+        <label for="name" class="control-label font">Oui</label>
+        <input  type="radio" name="publier" value="oui" >
 
 
-            <label for="name" class="control-label font">Non</label>
-            <input  type="radio" name="publier" value="non" >
-        </div>
-    </div>
+        <label for="name" class="control-label font">Non</label>
+        <input  type="radio" name="publier" value="non"></p>
 
-            <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
     <p>Choisissez une photo avec une taille inférieure à 2 Mo.</p>
+    <div class="col-md-offset-3">
     <input type="file" name="image">
+    </div>
     <br /><br />
-    <input type="submit" name="ok" value="Envoyer">
+
+    <input  class="button" type="submit" name="ok" value="Envoyer">
 </form>
 
 </body>
