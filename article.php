@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 include 'config.php';
 ?>
 
@@ -42,7 +42,7 @@ include 'config.php';
 
     <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
     <p>Choisissez une photo avec une taille inférieure à 2 Mo.</p>
-    <div class="col-md-offset-3">
+    <div class="col-xs-offset-2 col-md-offset-3">
     <input type="file" name="image">
     </div>
     <br /><br />
