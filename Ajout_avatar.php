@@ -12,7 +12,7 @@ include 'config.php';
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-1">
+        <div class="col-md-8 col-xs-offset-2 col-md-offset-1">
 
             <form action="Ajout_avatar1.php" method="post" enctype="multipart/form-data">
                 Sélectionner une image à télécharger:
@@ -20,7 +20,7 @@ include 'config.php';
                 <br>
 
 
-            <input  class="button col-md-offset-1" type="submit" value="Envoyer" name="submit">
+            <input  class="button col-xs-offset-2 col-md-offset-1" type="submit" value="Envoyer" name="submit">
 
         </form>
     </div>

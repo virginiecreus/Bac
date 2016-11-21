@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_array($exec)) {
                 </div>
 
                 <div class="profil_body">
-                    <div class="col-md-offset-4">
+                    <div class="col-md-offset-4 col-xs-offset-4">
                         <!-- modale -->
                         <a data-target="#modifier" data-original-title="Edit this user" data-toggle="modal"  class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
                         <div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
