@@ -15,11 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="MySQL - DjamelB@91.134.133.249" uuid="79139a88-36e4-4419-b229-3e8381d02e5b">
+    <data-source source="LOCAL" name="MySQL - FabienM@91.134.133.249" uuid="75d26a1e-4fbc-4da8-9451-f465242f60f8">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://91.134.133.249:3306/DjamelB</jdbc-url>
+      <jdbc-url>jdbc:mysql://91.134.133.249:3306/FabienM</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

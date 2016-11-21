@@ -29,7 +29,8 @@ include 'config.php';
                         ?>
                     </select>
                     <br>
-                    <div class="col-md-6 col-md-offset-2">
+                    <p style="color: white">Voulez-vous vraiment supprimer cette article ?</p>
+                    <div class="col-md-6 col-md-offset-3">
                         <div class="col-md-2">
                             <input id="supprimer" name="supprimer" type="submit" value="Supprimer" class="btn btn-danger">
                         </div>

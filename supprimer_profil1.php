@@ -12,7 +12,7 @@ include 'config.php';
 if (isset($_POST['supprimer'])) {
 
 // on récupére les champs du formulaire
-    $id = (int)$_POST['id'];
+    $id = $_SESSION['id'];
 
 // On créé la requête
 
@@ -20,7 +20,8 @@ if (isset($_POST['supprimer'])) {
 
 // on envoie la requête
     $res = mysqli_query($bdd, $sup);
-    header('Location:profil.php?SuppresionReussi');
+
+    header('Location:deconnexion.php?SuppresionReussi');
 }
 else{
     header('Location:profil.php?ErreurSuppresion');
