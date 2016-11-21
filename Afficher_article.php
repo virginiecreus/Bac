@@ -1,19 +1,16 @@
-<?php session_start();
-include 'config.php'?>
+<?php include 'menu.php'?>
 
 
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Blog</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-<?php include 'menu.php'?>
 <?php
 // Requetes Sql pour afficher les article publier avec le pseudo
 $requete = "SELECT * FROM articles
@@ -31,10 +28,12 @@ while ($row = mysqli_fetch_array($exec)) {
 
 
     <div class="container">
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
             <div class="panel-heading">
-                <a class="MakaleYazariAdi">Titre :<?php echo ($row['titre_article']); ?></a>
-                <div class="btn-group" style="float:right;">
+                <p class="titre text-center" ;">Titre :<?php echo ($row['titre_article']); ?></p>
+
+               <!-- <div class="btn-group" style="float:right;">
+
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="glyphicon glyphicon-cog"></span>
                         <span class="sr-only">Toggle Dropdown</span>
@@ -44,7 +43,8 @@ while ($row = mysqli_fetch_array($exec)) {
                         <li role="separator" class="divider"></li>
                         <li><a href="#"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Delete</a></li>
                     </ul>
-                </div>
+                </div> -->
+
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
@@ -54,14 +54,14 @@ while ($row = mysqli_fetch_array($exec)) {
                             <img src="uploads_articles/<?php echo($row['image']); ?>" class="img-rounded center-block " width="100" height="150">
                         </a>
                     </div>
-                    <div class="media-body">
+                    <div class="media-body auteur">
                         <?php echo($row['article']); ?>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
         <div class="panel-footer">
-            <a href="#" class="MakaleYazariAdi">Posté par :<?php echo ($row['pseudo']); ?></a>
+            <p class="auteur">Posté par :<?php echo ($row['pseudo']); ?></p>
         </div>
         </div>
     </div>
@@ -75,8 +75,8 @@ while ($row = mysqli_fetch_array($exec)) {
 if(!$_SESSION['logged']){
 
 }
-else{
-    echo'<div class="contenaire">
+else{ ?>
+   <div class="container">
     <div class="row">
         <div class="col-md-offset-5">
 
@@ -92,20 +92,21 @@ else{
 <div class="modal fade" id="commentaire" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true" style="color: white">&times;</span>
                 </button>
-                <h4 class="modal-title " id="commentaire">Mettre un commentaire</h4>
+                <h4 class="modal-title titre " id="commentaire">Mettre un commentaire</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body body">
                 <?php include"commentaire.php"?>
             </div>
         </div>
     </div>
 </div>
-<br>';
-}
+<br>
+
+<?php }
 ?>
 
 
