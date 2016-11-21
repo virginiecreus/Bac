@@ -28,11 +28,28 @@ WHERE utilisateurs_id ";
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <tr>
-                            <td>Publié par:</td>
+                            <td>Publié par :</td>
                             <td><?php echo($rows['pseudo']); ?></td>
                             <br>
                             <td><?php echo ($rows['commentaire']); ?></td>
                         </tr>
+                        <input data-target="#modifier" data-toggle="modal" name="modifier" type="submit" value="Modifier" class="button">
+                        <div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" style="color: white">&times;</span>
+                                        </button>
+                                        <h4 style="color: white" class="modal-title text-center titre text " id="modifier">Modification</h4>
+                                    </div>
+                                    <div class="modal-body body">
+                                        <?php include"modifier_commentaire.php"?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a  class="close" href="traitement_supp_commentaire.php?id=<?= $rows['commentaire'] ?>">X</a>
                     </div>
                 </div>
                 <?php

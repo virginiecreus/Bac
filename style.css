@@ -6,6 +6,9 @@
     font-family: sans-serif;
     text-transform: uppercase;
 }
+.navbar-nav > li:hover {
+    background-color: black;
+}
 
 .header{
     background-color: rgba(5, 9, 112, 0.7);
